@@ -1,0 +1,17 @@
+# EdgeTX compiled bytecode (EdgeTX will compile .luac natively on radio)
+*.luac
+
+# Python cache & temp
+__pycache__/
+*.py[cod]
+*$py.class
+*.tmp
+
+# OS generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Virtual environments
+venv/
+.venv/
