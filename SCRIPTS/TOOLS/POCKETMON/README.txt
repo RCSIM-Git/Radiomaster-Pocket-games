@@ -6,7 +6,7 @@ The Ultimate FPV Drone RPG for EdgeTX Transmitters!
 Optimized specifically for RadioMaster Pocket & MT12 (128x64 monochrome LCD).
 
 CONCEPT:
-Capture, tune, and battle rogue FPV drones in a retro Game Boy RPG world!
+Capture, tune, and battle rogue FPV drones in a retro 8-bit RPG world!
 
 STARTERS:
 - WHOOPY   (Micro Whoop - Fast, Agile, High RPM)

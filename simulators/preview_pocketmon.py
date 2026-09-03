@@ -38,7 +38,7 @@ WIDTH = 128
 HEIGHT = 64
 SCALE = 5
 
-# Game Boy LCD Palette
+# Retro 2-bit Monochrome LCD Palette
 BG_COLOR = "#8BAC0F"     # Retro light green
 PIXEL_COLOR = "#0F380F"  # Retro dark green
 
