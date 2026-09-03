@@ -69,7 +69,7 @@ An original retro RPG tailored for the FPV drone community!
   * `CINEMAX` (Pusher Cinewhoop – Armored foam ducts, smooth roll)
 * **Airfield & Bando Overworld:** Explore tarmac runways, tall weeds, safety fences, trees, and hangar workshops.
 * **Wild Rogue Quads:** Encounter and battle wild quads like `MOBULA 7`, `NAZGUL 5`, and the rare legendary GPS boss `PHANTOM` featuring the *Return To Home* move!
-* **ELRS Telemetry Binding:** Instead of throwing Pokéballs, transmit **`BIND PACKETS`** over ExpressLRS to bind rogue drones directly into your radio's Model Hangar!
+* **ELRS Telemetry Binding:** Transmit **`BIND PACKETS`** over ExpressLRS to wirelessly bind rogue drones directly into your radio's Model Hangar!
 * **Paddock Quick-Repair:** Flip momentary switch `[SE]` at the hangar paddock to instantly recharge all your LiPos.
 
 ### 2. 🥚 PocketPet: FPV Drone Virtual Pet (`PocketPet.lua`)
@@ -140,7 +140,7 @@ Every major game includes an accurate, standalone desktop simulator written in P
 ### How to run:
 Open the `simulators/` folder and double-click the desired launcher:
 * **`run_pocketmon_sim.bat`** – Launches Pocketmon: Drone Edition
-* **`run_pocket_pet_sim.bat`** – Launches Pocket Pet (Tamagotchi)
+* **`run_pocket_pet_sim.bat`** – Launches Pocket Pet (Virtual Pet)
 * **`run_bad_apple_sim.bat`** – Launches Bad Apple!! PV Player
 
 *Requirements: Python 3.10+ installed from [python.org](https://www.python.org/).*
@@ -178,7 +178,7 @@ SD_CARD_ROOT/
 └── SOUNDS/
     ├── DOOM/                (Gunshots, monster sounds, item pickups)
     ├── MUSIC/               (Tracks, PocketAmp playlist, badapple.wav)
-    ├── POCKETPET/           (8-bit retro Tamagotchi chiptunes)
+    ├── POCKETPET/           (8-bit retro virtual pet chiptunes)
     └── POCKETMON/           (FPV drone moves, telemetry binds, level up)
 ```
 

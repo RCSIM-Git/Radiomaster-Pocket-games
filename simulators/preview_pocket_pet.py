@@ -37,8 +37,8 @@ STAGE_EGG = 0
 STAGE_BABY = 1
 STAGE_CHILD = 2
 STAGE_ADULT_DRONE = 3
-STAGE_ADULT_PIKA = 4
-STAGE_ADULT_DINO = 5
+STAGE_ADULT_CINE = 4
+STAGE_ADULT_WING = 5
 
 MODE_MAIN = 0
 MODE_FEED_MENU = 1
@@ -212,10 +212,10 @@ class PocketPetSimulator:
                 self.stage = STAGE_ADULT_DRONE
                 self.trigger_msg("EVOLUTION: 5\" Freestyle Beast Unlocked!", 4)
             elif self.care_mistakes <= 2:
-                self.stage = STAGE_ADULT_PIKA
+                self.stage = STAGE_ADULT_CINE
                 self.trigger_msg("EVOLUTION: Cinewhoop 4K Pro Unlocked!", 4)
             else:
-                self.stage = STAGE_ADULT_DINO
+                self.stage = STAGE_ADULT_WING
                 self.trigger_msg("EVOLUTION: FPV Flying Wing Unlocked!", 4)
             self.play_sfx("win.wav")
             self.save_state()
@@ -603,7 +603,7 @@ class PocketPetSimulator:
                 self.canvas.create_rectangle(px - 19*SCALE, py + 12*SCALE, px - 16*SCALE, py + 15*SCALE, fill=dark, outline=dark)
                 self.canvas.create_rectangle(px + 16*SCALE, py + 12*SCALE, px + 19*SCALE, py + 15*SCALE, fill=dark, outline=dark)
 
-        elif self.stage == STAGE_ADULT_PIKA:
+        elif self.stage == STAGE_ADULT_CINE:
             # Stage 3B: Cinewhoop Pro
             self.canvas.create_rectangle(px - 20*SCALE, py - 9*SCALE, px - 6*SCALE, py + 2*SCALE, outline=dark, width=3)
             self.canvas.create_rectangle(px + 6*SCALE, py - 9*SCALE, px + 20*SCALE, py + 2*SCALE, outline=dark, width=3)
@@ -615,7 +615,7 @@ class PocketPetSimulator:
             self.canvas.create_rectangle(px - 3*SCALE, py - 2*SCALE, px + 3*SCALE, py + 4*SCALE, fill=light, outline=light)
             self.canvas.create_rectangle(px - 1*SCALE, py, px + 1*SCALE, py + 2*SCALE, fill=dark, outline=dark)
 
-        elif self.stage == STAGE_ADULT_DINO:
+        elif self.stage == STAGE_ADULT_WING:
             # Stage 3C: FPV Flying Wing
             self.canvas.create_polygon(px, py - 8*SCALE, px - 22*SCALE, py + 4*SCALE, px + 22*SCALE, py + 4*SCALE, fill=dark, outline=dark)
             self.canvas.create_line(px - 22*SCALE, py + 4*SCALE, px - 22*SCALE, py - 4*SCALE, fill=dark, width=3)

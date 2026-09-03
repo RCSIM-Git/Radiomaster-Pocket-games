@@ -61,9 +61,9 @@ def tone_noise(duration_sec, volume=0.5):
 def silence(duration_sec):
     return [0] * int(SAMPLE_RATE * duration_sec)
 
-print("=== Generating 8-bit Tamagotchi Sound Effects ===")
+print("=== Generating 8-bit Virtual Pet Sound Effects ===")
 
-# 1. BEEP (Classic Tamagotchi alert double-beep: 1046Hz, 1500Hz)
+# 1. BEEP (Classic retro alert double-beep: 1046Hz, 1500Hz)
 beep = (
     tone_square(1046, 0.08, volume=0.7) +
     silence(0.04) +

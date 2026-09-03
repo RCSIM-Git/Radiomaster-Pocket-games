@@ -65,7 +65,7 @@ Autorskie retro RPG w świecie dronów FPV!
 - **Wybór Drona Startowego:** `WHOOPY` (Micro TinyWhoop), `5"BEAST` (Freestyle Monster), `TOOTHY` (Toothpick racer), `CINEMAX` (Pusher cinequad).
 - **Eksploracja Świata:** Mapa lotniska i opuszczonego Bando z przeszkodami, hangarem i strefą ładowania pakietów.
 - **Dzikie Drony:** Poluj i walcz z `MOBULA 7`, `NAZGUL 5`, czy legendarnym `PHANTOM` z atakiem *Return To Home*!
-- **Mechanika Bindowania ELRS:** Zamiast Pokéballi wysyłasz pakiety bindowania telemetrii ELRS!
+- **Mechanika Bindowania ELRS:** Wysyłaj pakiety bindowania telemetrii ExpressLRS, aby bezprzewodowo przejmować dzikie drony do swojego Hangaru!
 - **Szybka naprawa:** Przełącznik `[SE]` w padoku błyskawicznie ładuje pakiety LiPo Twojej floty.
 
 ### 2. 🥚 PocketPet: Wirtualny Dron FPV (`PocketPet.lua`)
@@ -174,7 +174,7 @@ SD_CARD_ROOT/
 └── SOUNDS/
     ├── DOOM/                (Efekty strzałów, wrogów i przedmiotów)
     ├── MUSIC/               (Utwory muzyczne, PocketAmp playlist, badapple.wav)
-    ├── POCKETPET/           (8-bitowe retro dźwięki Tamagotchi)
+    ├── POCKETPET/           (8-bitowe retro dźwięki wirtualnego drona)
     └── POCKETMON/           (Dźwięki quadów, manewry FPV, bindowanie ELRS)
 ```
 

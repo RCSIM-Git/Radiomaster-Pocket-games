@@ -1,5 +1,5 @@
 @echo off
-title Pocket Pet (Tamagotchi) EdgeTX Simulator
+title Pocket Pet (Virtual Drone) EdgeTX Simulator
 cd /d "%~dp0"
 python preview_pocket_pet.py
 pause
