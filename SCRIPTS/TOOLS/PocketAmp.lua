@@ -1,9 +1,9 @@
----- TNS|Winamp Player|TNE
+---- TNS|PocketAmp Player|TNE
 --------------------------------------------------------------------------------
--- WINAMP v2.91 FOR EDGETX (128x64 Monochrome LCD)
+-- POCKETAMP v2.0 FOR EDGETX (128x64 Monochrome LCD)
 -- Compatible with: RadioMaster Pocket, RadioMaster MT12, TX12, Boxer, Zorro
 -- Features:
---   - Authentic Winamp 2.x retro interface
+--   - Authentic 90s retro desktop player interface
 --   - Animated Spectrum Analyzer with falling peak lines
 --   - Big LCD segmented timer (MM:SS) & Bitrate / Frequency indicators
 --   - Smooth Marquee ticker for track titles
@@ -35,7 +35,7 @@ local spectrumPeaks = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 local lastAnimTick = 0
 
 -- Marquee state
-local marqueeText = "WINAMP - IT REALLY WHIPS THE LLAMA'S ASS"
+local marqueeText = "POCKETAMP - RETRO AUDIO PLAYER FOR EDGETX"
 local marqueeOffset = 0
 local lastMarqueeTick = 0
 
@@ -100,8 +100,8 @@ local function scanTracks()
                     local title = string.sub(fname, 1, -5)
                     if lower == "llama.wav" then
                         title = "DJ Mike Llama - Llama Whippin' Intro"
-                    elseif lower == "winamp_intro.wav" then
-                        title = "Nullsoft - Chiptune Intro"
+                    elseif lower == "pocketamp_intro.wav" then
+                        title = "PocketAmp - Chiptune Intro"
                     end
                     tracks[#tracks + 1] = {
                         name = fname,
@@ -296,7 +296,7 @@ local function updateSpectrum()
             
             spectrumHeights[i] = targetH
             
-            -- Peak drop logic (classic Winamp visualizer feature)
+            -- Peak drop logic (classic PocketAmp visualizer feature)
             if targetH >= spectrumPeaks[i] then
                 spectrumPeaks[i] = targetH
             else
@@ -351,7 +351,7 @@ local function drawPlayer()
 
     -- 1. TITLE BAR (y: 0..7)
     lcd.drawFilledRectangle(0, 0, 128, 8)
-    lcd.drawText(2, 1, "~ WINAMP 2.91", INVERS + SMLSIZE)
+    lcd.drawText(2, 1, "~ POCKETAMP 2.0", INVERS + SMLSIZE)
     lcd.drawText(112, 1, "_ X", INVERS + SMLSIZE)
     
     -- 2. MAIN DISPLAY BOX (y: 9..34)
@@ -453,7 +453,7 @@ end
 local function drawPlaylist()
     -- Header
     lcd.drawFilledRectangle(0, 0, 128, 8)
-    local headerTitle = string.format("~ WINAMP PLAYLIST (%d)", #tracks)
+    local headerTitle = string.format("~ POCKETAMP PLAYLIST (%d)", #tracks)
     lcd.drawText(2, 1, headerTitle, INVERS + SMLSIZE)
     lcd.drawText(112, 1, "ESC", INVERS + SMLSIZE)
     
@@ -649,7 +649,7 @@ local function run(event)
         elseif isEnter(event) and (now > startupIgnoreUntil) then
             executeButton(selectedButton)
         elseif isExit(event) and (now > startupIgnoreUntil) then
-            -- Clean exit from Winamp
+            -- Clean exit from PocketAmp
             safeStopAudio()
             return 2
         end

@@ -87,8 +87,8 @@ Legendarna animacja *Bad Apple!!* odtwarzana bezpośrednio na aparaturze:
 - **Zsynchronizowany dźwięk:** Jakość 32kHz 16-bit PCM Mono.
 - **Spektrum audio:** Równolegle animowany 4-pasmowy analizator widma audio na żywo.
 
-### 5. 📻 Winamp Retro Player (`Winamp.lua`)
-Kultowy odtwarzacz muzyczny Winamp 2.91 na Twoim nadajniku:
+### 5. 📻 PocketAmp: Retro Odtwarzacz z Lat 90. (`PocketAmp.lua`)
+Kultowy styl klasycznych desktopowych odtwarzaczy muzycznych z lat 90. na Twoim nadajniku:
 - **Interfejs retro:** 10-słupkowy animowany korektor graficzny (Spectrum Analyzer) z opadającymi pikami.
 - **Duży licznik czasu:** Wyświetlacz segmentowy MM:SS, wskaźniki bitrate i częstotliwości.
 - **Płynny Marquee:** Przewijane tytuły odtwarzanych utworów.
@@ -123,8 +123,8 @@ Kultowy odtwarzacz muzyczny Winamp 2.91 na Twoim nadajniku:
 1. Bezpiecznie odłącz kabel USB od aparatury.
 2. Przytrzymaj przycisk **`[SYS]`** na aparaturze, aby wejść w menu systemowe.
 3. Za pomocą rolki przejdź na zakładkę **`TOOLS`** (Narzędzia).
-4. Przewiń listę i wybierz dowolną grę (np. **Pocketmon**, **Pokemon**, **Doom**, **PocketPet**).
-5. Kliknij rolkę **`[ENT]`**, aby uruchomić grę!
+4. Przewiń listę i wybierz dowolną aplikację (np. **Pocketmon**, **PocketPet**, **Doom**, **PocketAmp**).
+5. Kliknij rolkę **`[ENT]`**, aby uruchomić!
 
 ---
 
@@ -166,13 +166,13 @@ SD_CARD_ROOT/
 │       ├── Doom.lua
 │       ├── Pocketmon.lua
 │       ├── PocketPet.lua
-│       ├── Winamp.lua
+│       ├── PocketAmp.lua
 │       ├── BADAPPLE/        (badapple.dat, badapple.idx)
 │       ├── POCKETMON/       (Instrukcje i konfiguracja)
 │       └── POCKETPET/       (pet.dat – stan zapisu)
 └── SOUNDS/
     ├── DOOM/                (Efekty strzałów, wrogów i przedmiotów)
-    ├── MUSIC/               (Utwory muzyczne, Winamp playlist, badapple.wav)
+    ├── MUSIC/               (Utwory muzyczne, PocketAmp playlist, badapple.wav)
     ├── POCKETPET/           (8-bitowe retro dźwięki Tamagotchi)
     └── POCKETMON/           (Dźwięki quadów, manewry FPV, bindowanie ELRS)
 ```

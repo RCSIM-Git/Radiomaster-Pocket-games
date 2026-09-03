@@ -91,8 +91,8 @@ The iconic *Bad Apple!!* music video streamed directly on your transmitter:
 * **Synchronized Audio:** 32kHz 16-bit PCM mono audio playback.
 * **Live Hardware Spectrum Analyzer:** Real-time 4-band audio EQ visualizer animated alongside the video in retro 4:3 theater mode.
 
-### 5. 📻 Winamp Retro Player (`Winamp.lua`)
-The classic Winamp 2.91 MP3 player brought to EdgeTX:
+### 5. 📻 PocketAmp: Retro 90s Player (`PocketAmp.lua`)
+A nostalgic 90s-style desktop audio player recreated for EdgeTX:
 * **Retro Interface:** Animated 10-bar graphic equalizer with falling peak meters.
 * **Big LCD Timer:** Digital MM:SS segment display, bitrate, and sample rate indicators.
 * **Smooth Marquee:** Horizontal scrolling ticker for song titles.
@@ -127,7 +127,7 @@ The classic Winamp 2.91 MP3 player brought to EdgeTX:
 1. Safely eject the USB connection from your PC.
 2. Long-press the **`[SYS]`** button on your radio to enter the system menu.
 3. Use the roller wheel to navigate to the **`TOOLS`** tab.
-4. Scroll through the list and select any game (e.g., **Pocketmon**, **Pokemon**, **Doom**, **PocketPet**).
+4. Scroll through the list and select any app (e.g., **Pocketmon**, **PocketPet**, **Doom**, **PocketAmp**).
 5. Click the roller wheel **`[ENT]`** to launch and play!
 
 ---
@@ -170,13 +170,13 @@ SD_CARD_ROOT/
 │       ├── Doom.lua
 │       ├── Pocketmon.lua
 │       ├── PocketPet.lua
-│       ├── Winamp.lua
+│       ├── PocketAmp.lua
 │       ├── BADAPPLE/        (badapple.dat, badapple.idx)
 │       ├── POCKETMON/       (Config & documentation)
 │       └── POCKETPET/       (pet.dat – persistent save)
 └── SOUNDS/
     ├── DOOM/                (Gunshots, monster sounds, item pickups)
-    ├── MUSIC/               (Tracks, Winamp playlist, badapple.wav)
+    ├── MUSIC/               (Tracks, PocketAmp playlist, badapple.wav)
     ├── POCKETPET/           (8-bit retro Tamagotchi chiptunes)
     └── POCKETMON/           (FPV drone moves, telemetry binds, level up)
 ```

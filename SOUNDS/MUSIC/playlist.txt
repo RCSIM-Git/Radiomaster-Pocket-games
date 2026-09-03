@@ -1,11 +1,11 @@
 # ==========================================
-# WINAMP FOR EDGETX - PLAYLIST CONFIG
+# POCKETAMP FOR EDGETX - PLAYLIST CONFIG
 # ==========================================
 # Umieść pliki audio .wav w tym katalogu: /SOUNDS/MUSIC/
 # Format: WAV, PCM 16-bit, Mono, 32000 Hz (lub 16000 Hz / 22050 Hz).
 #
 # Kolejność utworów:
 llama.wav
-winamp_intro.wav
+pocketamp_intro.wav
 hello.wav
 badapple.wav
