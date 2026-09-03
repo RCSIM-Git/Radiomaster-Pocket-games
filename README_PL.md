@@ -13,13 +13,48 @@ Oficjalna kolekcja gier i aplikacji rozrywkowych stworzona specjalnie dla miniat
 ---
 
 ## 📑 Spis treści / Table of Contents
-1. [Przegląd Gier / Games Showcase](#-przegląd-gier--games-showcase)
-2. [Instrukcja Instalacji na Aparaturze (SD Card)](#-instrukcja-instalacji-na-aparaturze-krok-po-kroku)
-3. [Symulatory PC (Graj na komputerze)](#-symulatory-pc-graj-na-komputerze-bez-radia)
-4. [Tabela Sterowania / Controls](#-tabela-sterowania--controls-guide)
-5. [Struktura Katalogów Karty SD](#-struktura-katalogów-karty-sd)
-6. [Narzędzia Deweloperskie](#-narzędzia-deweloperskie--tools)
-7. [Licencja](#-licencja--license)
+1. [Kompatybilność z Aparaturami](#-kompatybilność-z-innymi-aparaturami-edgetx--opentx)
+2. [Przegląd Gier / Games Showcase](#-przegląd-gier--games-showcase)
+3. [Instrukcja Instalacji na Aparaturze (SD Card)](#-instrukcja-instalacji-na-aparaturze-krok-po-kroku)
+4. [Symulatory PC (Graj na komputerze)](#-symulatory-pc-graj-na-komputerze-bez-radia)
+5. [Tabela Sterowania / Controls](#-tabela-sterowania--controls-guide)
+6. [Struktura Katalogów Karty SD](#-struktura-katalogów-karty-sd)
+7. [Narzędzia Deweloperskie](#-narzędzia-deweloperskie--tools)
+8. [Licencja](#-licencja--license)
+
+---
+
+## 📻 Kompatybilność z Innymi Aparaturami (EdgeTX / OpenTX)
+
+Wszystkie gry i aplikacje zostały napisane w czystym **EdgeTX Lua** i zoptymalizowane natywnie pod monochromatyczne ekrany **128x64 LCD**.
+
+### ✅ Pełna kompatybilność (100% Plug & Play - 128x64)
+Potwierdzone działanie od razu, bez konieczności jakichkolwiek modyfikacji kodu:
+* **RadioMaster:**
+  * **Pocket** (Natywna platforma referencyjna)
+  * **Boxer** (Ten sam ekran 128x64 LCD i procesor STM32)
+  * **TX12 / TX12 MKII** (128x64 monochromatyczny)
+  * **Zorro** (128x64 monochromatyczny – format gamepadu!)
+  * **MT12** (Aparatura pistoletowa do modeli aut i łodzi – sterowanie kołem i spustem)
+* **Jumper:**
+  * **T-Lite / T-Lite V2** (128x64 mono)
+  * **T-Pro / T-Pro V2** (128x64 mono)
+* **FrSky:**
+  * **Taranis Q X7 / Q X7S** (128x64 mono)
+  * **Taranis X9 Lite** (128x64 mono)
+* **BetaFPV:**
+  * **LiteRadio 3 Pro** (Wersja z EdgeTX)
+
+### ⚠️ Częściowa kompatybilność (Szersze lub kolorowe ekrany)
+* **FrSky Taranis X9D / X9D Plus / 2019 (212x64):** Gry działają w 100% płynnie, wyjustowane do lewej krawędzi szerszego wyświetlacza (z marginesem po prawej).
+* **Aparatury z kolorowymi ekranami (RadioMaster TX16S / TX16S MKII, Jumper T16 / T18, FrSky Horus X10/X12, 480x272):** Gry uruchamiają się bez błędów, renderowane w oknie 128x64 w lewym górnym rogu.
+
+### ❌ Brak kompatybilności
+* **Aparatury z systemem FrSky ETHOS (np. X18, X20, Tandem, Twin):** ETHOS posiada własne, odmienne API Lua i nie uruchamia skryptów EdgeTX/OpenTX.
+
+### ⚙️ Wymagania
+* **Oprogramowanie:** EdgeTX 2.7+ (zalecane EdgeTX 2.8 / 2.9 / 2.10+) lub OpenTX 2.3+ z włączoną obsługą `LUA`.
+* **Karta pamięci:** Format FAT32 ze standardową strukturą katalogów `/SCRIPTS/TOOLS/` oraz `/SOUNDS/`.
 
 ---
 

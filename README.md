@@ -13,13 +13,48 @@ The ultimate collection of custom retro games, media players, and entertainment 
 ---
 
 ## 📑 Table of Contents
-1. [Games & Apps Showcase](#-games--apps-showcase)
-2. [Radio SD Card Installation Guide](#-radio-sd-card-installation-guide-step-by-step)
-3. [PC Simulators (Play on Desktop without Radio)](#-pc-simulators-play-on-desktop-without-radio)
-4. [Controls Mapping Guide](#-controls-mapping-guide)
-5. [SD Card Directory Structure](#-sd-card-directory-structure)
-6. [Developer & Audio Tools](#-developer--audio-tools)
-7. [License & Credits](#-license--credits)
+1. [Radio Hardware Compatibility](#-radio-hardware-compatibility)
+2. [Games & Apps Showcase](#-games--apps-showcase)
+3. [Radio SD Card Installation Guide](#-radio-sd-card-installation-guide-step-by-step)
+4. [PC Simulators (Play on Desktop without Radio)](#-pc-simulators-play-on-desktop-without-radio)
+5. [Controls Mapping Guide](#-controls-mapping-guide)
+6. [SD Card Directory Structure](#-sd-card-directory-structure)
+7. [Developer & Audio Tools](#-developer--audio-tools)
+8. [License & Credits](#-license--credits)
+
+---
+
+## 📻 Radio Hardware Compatibility
+
+All games and utilities are written in standard **EdgeTX Lua** and designed natively for **128x64 Monochrome LCD** screens.
+
+### ✅ Fully Compatible (100% Plug & Play - 128x64)
+Confirmed working out-of-the-box with zero configuration or code changes:
+* **RadioMaster:**
+  * **Pocket** (Native reference design)
+  * **Boxer** (Same 128x64 LCD & STM32 processor)
+  * **TX12 / TX12 MKII** (128x64 monochrome)
+  * **Zorro** (128x64 monochrome – perfect gamepad ergonomics!)
+  * **MT12** (Surface pistol-grip radio for RC cars & boats – steering wheel & trigger support)
+* **Jumper:**
+  * **T-Lite / T-Lite V2** (128x64 monochrome)
+  * **T-Pro / T-Pro V2** (128x64 monochrome)
+* **FrSky:**
+  * **Taranis Q X7 / Q X7S** (128x64 monochrome)
+  * **Taranis X9 Lite** (128x64 monochrome)
+* **BetaFPV:**
+  * **LiteRadio 3 Pro** (EdgeTX version)
+
+### ⚠️ Partially Compatible (Wider or Color Screens)
+* **FrSky Taranis X9D / X9D Plus / 2019 (212x64):** Runs at 100% full speed, rendered aligned to the left side of the wider display (with blank space on the right).
+* **Color Screen Radios (RadioMaster TX16S / TX16S MKII, Jumper T16 / T18, FrSky Horus X10/X12, 480x272):** Scripts run without crashing, rendered in a 128x64 box in the top-left corner.
+
+### ❌ Incompatible
+* **FrSky ETHOS Radios (X18, X20, Tandem, Twin):** ETHOS uses a proprietary Lua API and does not support EdgeTX/OpenTX scripts.
+
+### ⚙️ Firmware Requirements
+* **Firmware:** EdgeTX 2.7+ (EdgeTX 2.8 / 2.9 / 2.10+ recommended) or OpenTX 2.3+ with `LUA` enabled.
+* **MicroSD Card:** FAT32 formatted with standard `/SCRIPTS/TOOLS/` and `/SOUNDS/` directories.
 
 ---
 
