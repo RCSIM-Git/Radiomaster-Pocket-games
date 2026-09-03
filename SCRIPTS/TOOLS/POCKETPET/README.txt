@@ -1,45 +1,45 @@
 ================================================================================
-POCKET PET (FPV Drone Edition) for EdgeTX (128x64 Monochrome LCD)
+POCKET PET (FPV Drone Virtual Pet) for EdgeTX (128x64 Monochrome LCD)
 ================================================================================
-Kompatybilność: RadioMaster Pocket, MT12, Boxer, TX12, Zorro
+Compatibility: RadioMaster Pocket, MT12, Boxer, TX12, Zorro, and 128x64 radios.
 
-Prawdziwy wirtualny dron FPV na Twojej aparaturze!
-Zamiast zwykłej buźki/zwierzaka, hodujesz, karmisz prądem i ulepszasz prawdziwe modele dronów!
+An authentic retro virtual FPV drone simulator on your transmitter!
+Instead of a regular pet, you incubate, power up, clean, and evolve real FPV drone models!
 
-Etapy Ewolucji Drona:
-1. Kapsuła / Stacja Ładowania (Flight Case):
-   - Pancerna walizka transportowa Pelican ze statusem ładowania baterii i anteną VTX.
-   - Wygrzewanie i ładowanie do 100% przyciskiem [SE] lub ruchami drążków.
-2. Tiny Whoop 65mm:
-   - 4 charakterystyczne tunele osłonowe (ducts), obracające się wewnątrz śmigła,
-     centralny canopy z okiem kamery FPV i antenką dipolową.
+Drone Evolution Stages:
+1. Flight Case (Charging Pod):
+   - Armored Pelican flight case with battery charging status and VTX antenna.
+   - Warm-up and charge to 100% using switch [SE] or gimbal stick movements.
+2. TinyWhoop (65mm):
+   - 4 ducted prop guards with spinning props, central canopy, FPV camera, and dipole antenna.
 3. Toothpick 3" (Racer):
-   - Odsłonięte ramiona węglowe ramy X-Frame, 4 silniki bezszczotkowe z wirującymi
-     śmigłami, pakiet 3S LiPo spięty rzepem, klatka kamery FPV i antena Pagoda.
-4. Modele Dorosłe (Adult Evolutions - zależne od stylu pilotażu i dbania o sprzęt):
+   - Exposed carbon fiber X-frame, 4 brushless motors with spinning props, 3S LiPo strap,
+     FPV camera cage, and Pagoda antenna.
+4. Adult Evolutions (depends on pilot care and maintenance):
    - 5" Freestyle Beast:
-     Grube ramiona z karbonu, potężne silniki 2207 z efektem rozmycia śmigieł 5",
-     pakiet 6S LiPo, kamera GoPro na uchwycie TPU 30°, antena koniczynka VTX
-     i tylne diody LED na ramionach!
+     Heavy carbon arms, powerful 2207 motors with 5" prop-blur effect, 6S LiPo,
+     GoPro session on 30-deg TPU mount, cloverleaf VTX antenna, and rear arm LEDs!
    - Cinewhoop 4K Pro:
-     4 masywne tunele piankowe/karbonowe, centralna kamera 4K do płynnych ujęć.
-   - FPV Flying Wing (Skrzydło):
-     Szybkie skrzydło delta z pionowymi statecznikami i tylnym silnikiem pchającym (pusher prop)!
+     4 massive foam/carbon ducts and central 4K camera for ultra-smooth cinema flights.
+   - FPV Flying Wing:
+     Fast delta wing with vertical stabilizers and rear pusher propeller!
 
-Zręcznościowa Mini-Gra: "Złap Baterię" (Catch the Battery)
-- Sterujesz lecącym dronem w lewo/prawo za pomocą drążków gimbals!
-- Łapiesz pakiety LiPo (🔋 +10 pkt) oraz przekąski (🍗 +5 pkt), unikając zakłóceń/bomb (💣).
+Arcade Mini-Game: "Catch the Battery"
+- Fly the drone left and right using the transmitter gimbals!
+- Catch falling LiPo batteries (+10 pts) and snacks (+5 pts) while dodging bombs and glitches.
 
-Integracja z Telemetrią:
-- Dron sprawdza stan faktycznej baterii Twojego RadioMastera (np. 8.2V)!
+Telemetry Integration:
+- The pet monitors and reacts to your transmitter's actual battery voltage (e.g. 8.2V)!
 
-Sterowanie (RadioMaster Pocket):
-- Przycisk [SE] (prawy górny bark):
-    * Ładowanie w kapsule / Test silników / Potwierdzenie
-- Rolka [ROT] / Drążki (Lewo / Prawo):
-    * Wybór ikon z górnego menu (JEDZ, SEN, GRA, LEK, MYJ, STAN)
-- Kliknięcie rolki [ENT]:
-    * Uruchomienie wybranej akcji
-- Klawisz [E] w symulatorze PC:
-    * Błyskawiczny podgląd wszystkich modeli dronów (Kapsuła -> Whoop -> Toothpick -> 5" -> Cinewhoop -> Wing)
+Controls (RadioMaster Pocket):
+- Switch [SE] (Top-right shoulder):
+    * Charge in pod / Motor test / Confirm
+- Roller [ROT] / Sticks (Left / Right):
+    * Select menu icons (FEED, REST, PLAY, MEDS, WASH, STAT)
+- Roller Click [ENT]:
+    * Execute selected action
+- Return [RTN]:
+    * Back / Cancel
+- Key [E] in PC Simulator:
+    * Cycle and preview all drone models (Pod -> Whoop -> Toothpick -> 5" -> Cine -> Wing)
 ================================================================================

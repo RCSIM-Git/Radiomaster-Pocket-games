@@ -1,141 +1,148 @@
-# 🎮 RadioMaster Pocket Games & Apps (EdgeTX 128x64 LCD) 🛸
+# 🎮 RadioMaster Pocket Games & Apps Suite (EdgeTX 128x64 LCD) 🛸
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![EdgeTX](https://img.shields.io/badge/EdgeTX-2.8%2B%20%7C%202.9%20%7C%202.10%2B-orange.svg)](https://edgetx.org/)
 [![Hardware](https://img.shields.io/badge/Hardware-RadioMaster%20Pocket%20%2F%20MT12%20%2F%20Boxer-blue.svg)](https://www.radiomasterrc.com/)
 [![Display](https://img.shields.io/badge/Display-128x64%20Monochrome%20LCD-brightgreen.svg)]()
-[![Python Simulators](https://img.shields.io/badge/PC%20Simulators-Python%203%20%2F%20Tkinter-green.svg)]()
+[![PC Simulators](https://img.shields.io/badge/PC%20Simulators-Python%203%20%2F%20Tkinter-green.svg)]()
 
-Oficjalna kolekcja gier i aplikacji rozrywkowych stworzona specjalnie dla miniaturowej aparatury **RadioMaster Pocket** oraz innych aparatur z monochromatycznym ekranem **128x64** pracujących pod kontrolą systemu **EdgeTX** (np. MT12, Boxer, TX12, Zorro).
+> 🌐 **Language:** **English** | [Polski (Wersja polska)](README_PL.md)
 
----
-
-## 📑 Spis treści / Table of Contents
-1. [Przegląd Gier / Games Showcase](#-przegląd-gier--games-showcase)
-2. [Instrukcja Instalacji na Aparaturze (SD Card)](#-instrukcja-instalacji-na-aparaturze-krok-po-kroku)
-3. [Symulatory PC (Graj na komputerze)](#-symulatory-pc-graj-na-komputerze-bez-radia)
-4. [Tabela Sterowania / Controls](#-tabela-sterowania--controls-guide)
-5. [Struktura Katalogów Karty SD](#-struktura-katalogów-karty-sd)
-6. [Narzędzia Deweloperskie](#-narzędzia-deweloperskie--tools)
-7. [Licencja](#-licencja--license)
+The ultimate collection of custom retro games, media players, and entertainment tools engineered specifically for the compact **RadioMaster Pocket** and other **EdgeTX** transmitters featuring a **128x64 monochrome LCD screen** (such as the RadioMaster MT12, Boxer, TX12, and Zorro).
 
 ---
 
-## 🕹️ Przegląd Gier / Games Showcase
+## 📑 Table of Contents
+1. [Games & Apps Showcase](#-games--apps-showcase)
+2. [Radio SD Card Installation Guide](#-radio-sd-card-installation-guide-step-by-step)
+3. [PC Simulators (Play on Desktop without Radio)](#-pc-simulators-play-on-desktop-without-radio)
+4. [Controls Mapping Guide](#-controls-mapping-guide)
+5. [SD Card Directory Structure](#-sd-card-directory-structure)
+6. [Developer & Audio Tools](#-developer--audio-tools)
+7. [License & Credits](#-license--credits)
+
+---
+
+## 🕹️ Games & Apps Showcase
 
 ### 1. 🛸 Pocketmon: Drone Edition (`Pocketmon.lua`)
-Autorskie retro RPG w świecie dronów FPV! 
-- **Wybór Drona Startowego:** `WHOOPY` (Micro TinyWhoop), `5"BEAST` (Freestyle Monster), `TOOTHY` (Toothpick racer), `CINEMAX` (Pusher cinequad).
-- **Eksploracja Świata:** Mapa lotniska i opuszczonego Bando z przeszkodami, hangarem i strefą ładowania pakietów.
-- **Dzikie Drony:** Poluj i walcz z `MOBULA 7`, `NAZGUL 5`, czy legendarnym `PHANTOM` z atakiem *Return To Home*!
-- **Mechanika Bindowania ELRS:** Zamiast Pokéballi wysyłasz pakiety bindowania telemetrii ELRS!
-- **Szybka naprawa:** Przełącznik `[SE]` w padoku błyskawicznie ładuje pakiety LiPo Twojej floty.
+An original retro RPG tailored for the FPV drone community!
+* **Starter Quad Selection:** Choose your first starter drone at the workshop:
+  * `WHOOPY` (Micro TinyWhoop – High RPM, ducted agility)
+  * `5"BEAST` (Freestyle Monster – 6S raw power and durability)
+  * `TOOTHY` (Toothpick 2-3" – Ultra-lightweight racer)
+  * `CINEMAX` (Pusher Cinewhoop – Armored foam ducts, smooth roll)
+* **Airfield & Bando Overworld:** Explore tarmac runways, tall weeds, safety fences, trees, and hangar workshops.
+* **Wild Rogue Quads:** Encounter and battle wild quads like `MOBULA 7`, `NAZGUL 5`, and the rare legendary GPS boss `PHANTOM` featuring the *Return To Home* move!
+* **ELRS Telemetry Binding:** Instead of throwing Pokéballs, transmit **`BIND PACKETS`** over ExpressLRS to bind rogue drones directly into your radio's Model Hangar!
+* **Paddock Quick-Repair:** Flip momentary switch `[SE]` at the hangar paddock to instantly recharge all your LiPos.
 
 ### 2. ⚡ Pokémon Classic: Gen 1 (`Pokemon.lua`)
-Wierne odtworzenie kultowego Pokémon Red/Blue z Game Boya dostosowane do ekranu 128x64:
-- **Startery:** Pikachu, Charmander, Squirtle, Bulbasaur.
-- **Eksploracja:** Pallet Town, Route 1, dzika trawa, mechanika losowych spotkań.
-- **Turowy System Walki:** Paski HP, animacje ataków (Thundershock, Ember, Vine Whip), rzucanie Pokéballami i zapis stanu gry.
+An authentic recreation of the legendary Game Boy Pokémon Red/Blue experience:
+* **Starters:** Choose from Pikachu, Charmander, Squirtle, or Bulbasaur.
+* **Tile-based Overworld:** Pallet Town, Route 1, wild tall grass, buildings, and collision physics.
+* **Turn-Based Combat Engine:** Dynamic HP gauges, genuine attack animations (Thundershock, Ember, Vine Whip, Quick Attack), Pokéball throwing physics, and battle exp gains.
+* **Persistent Saves:** Game progress saves directly to the SD card.
 
-### 3. 🥚 PocketPet: Wirtualny Zwierzak / Tamagotchi (`PocketPet.lua`)
-Kultowy wirtualny zwierzak retro na Twoim radiu!
-- **Cykl życia:** Wykluwanie jajka, faza niemowlaka, dziecka oraz dorosłe ewolucje (m.in. Drone-Pet, Pika-Pet, Dino-Pet).
-- **Opieka:** Karmienie (jabłka / baterie), sprzątanie odchodów prysznicem, gaszenie światła do snu, leczenie chorób.
-- **Minigra zręcznościowa:** Łap spadające baterie i unikaj bomb gimbalem aparatury!
-- **Stały zapis:** Stan Twojego zwierzaka zapisuje się na karcie SD (`pet.dat`).
+### 3. 🥚 PocketPet: Virtual Pet / Tamagotchi (`PocketPet.lua`)
+A full-featured virtual pet simulation running on your RC radio:
+* **Life Cycle:** Egg incubation, hatching ceremony, baby, child, and adult evolution forms (including Drone-Pet, Pika-Pet, and Dino-Pet).
+* **Care System:** Feed with apples or recharge with batteries, clean poop with water showers, turn off lights for sleep, and treat illnesses.
+* **Arcade Mini-Game:** Catch falling batteries and dodge bombs/glitches using the transmitter gimbals!
+* **Battery-Backed Save State:** Progress automatically persists to `pet.dat` on the SD card.
 
 ### 4. 💀 DOOM: Pocket Edition (`Doom.lua`)
-Prawdziwy silnik 3D Raycasting (pseudo-3D wolfenstein/doom) renderowany w czasie rzeczywistym na monochromatycznym ekranie LCD 128x64!
-- **Płynny raycasting:** 64 promienie renderowane w ~30 FPS.
-- **Arsenał:** Pistolet oraz potężny Shotgun z animacją strzału i odrzutu.
-- **Przeciwnicy:** Demony czające się w korytarzach, minimapa podglądu pozycji oraz efekty dźwiękowe.
+A real-time 3D Raycasting first-person shooter engine running at a smooth 30 FPS on a 128x64 monochrome display:
+* **High-Performance Raycaster:** 64 rays cast in real time with distance shading.
+* **Weapons:** Pistol and a devastating Shotgun with muzzle flash, recoil animation, and sound effects.
+* **Enemies & Levels:** Imp demons roaming dungeon corridors, item pickups, and live mini-map navigation.
 
 ### 5. 🍎 Bad Apple!! PV Player (`BadApple.lua`)
-Legendarna animacja *Bad Apple!!* odtwarzana bezpośrednio na aparaturze:
-- **Płynny strumień wideo:** 20 FPS przy użyciu wydajnego silnika dekompresji prostokątów RLE.
-- **Zsynchronizowany dźwięk:** Jakość 32kHz 16-bit PCM Mono.
-- **Spektrum audio:** Równolegle animowany 4-pasmowy analizator widma audio na żywo.
+The iconic *Bad Apple!!* music video streamed directly on your transmitter:
+* **Smooth 20 FPS Video Streaming:** Powered by a customized high-speed 2D RLE rectangle decompression engine.
+* **Synchronized Audio:** 32kHz 16-bit PCM mono audio playback.
+* **Live Hardware Spectrum Analyzer:** Real-time 4-band audio EQ visualizer animated alongside the video in retro 4:3 theater mode.
 
 ### 6. 📻 Winamp Retro Player (`Winamp.lua`)
-Kultowy odtwarzacz muzyczny Winamp 2.91 na Twoim nadajniku:
-- **Interfejs retro:** 10-słupkowy animowany korektor graficzny (Spectrum Analyzer) z opadającymi pikami.
-- **Duży licznik czasu:** Wyświetlacz segmentowy MM:SS, wskaźniki bitrate i częstotliwości.
-- **Płynny Marquee:** Przewijane tytuły odtwarzanych utworów.
-- **Playlista i sterowanie:** Play, Pause, Prev, Next, Repeat, Shuffle, przewijanie paska postępu.
-- **Dźwięk:** Odsłuch przez wbudowany głośniczek lub wyjście słuchawkowe jack 3.5mm w aparaturze!
+The classic Winamp 2.91 MP3 player brought to EdgeTX:
+* **Retro Interface:** Animated 10-bar graphic equalizer with falling peak meters.
+* **Big LCD Timer:** Digital MM:SS segment display, bitrate, and sample rate indicators.
+* **Smooth Marquee:** Horizontal scrolling ticker for song titles.
+* **Full Playlist Support:** Prev, Play, Pause, Stop, Next, Repeat, Shuffle, and progress seek bar.
+* **Audio Routing:** Listen via the built-in radio speaker or the 3.5mm headphone jack.
 
 ### 7. 🕹️ Retro Arcade Pack
-Zestaw klasycznych gier zręcznościowych przygotowanych pod gimbale aparatury:
-- **`Game-Asteroids.lua`**: Kosmiczna strzelanka z niszczeniem asteroid i efektami dźwiękowymi.
-- **`Game-Breakout.lua`**: Klasyczny Arkanoid / niszczenie cegiełek paletką i piłką.
-- **`Game-Pong.lua`**: Pojedynek z komputerowym przeciwnikiem na punkty.
-- **`Game-Snake.lua`**: Nieśmiertelny wąż zbierający punkty na ekranie.
-- **`Game-Simulator.lua`**: Mini-symulator lotu samolotem rc kontrolowany drążkami.
-- **`Game-X-Tris.lua`**: Klasyczny Tetris z pełną oprawą graficzną i dźwiękami.
+Classic arcade games fine-tuned for radio gimbals and roller controls:
+* **`Game-Asteroids.lua`**: Space shooter with rock fragmentation, thruster physics, and sound effects.
+* **`Game-Breakout.lua`**: Classic brick-breaker paddle game.
+* **`Game-Pong.lua`**: 1v1 paddle duel against AI.
+* **`Game-Snake.lua`**: Retro arcade snake collecting apples.
+* **`Game-Simulator.lua`**: Lightweight stick flight simulator.
+* **`Game-X-Tris.lua`**: Full-featured Tetris with custom splash screens and sound effects.
 
 ---
 
-## 🚀 Instrukcja Instalacji na Aparaturze (Krok po kroku)
+## 🚀 Radio SD Card Installation Guide (Step-by-Step)
 
-### Wymagania:
-- Dowolna aparatura z systemem **EdgeTX 2.8+** (RadioMaster Pocket, MT12, Boxer, TX12, Zorro itp.).
-- Karta pamięci MicroSD sformatowana w systemie **FAT32**.
+### Prerequisites:
+* Any transmitter running **EdgeTX 2.8+** (RadioMaster Pocket, MT12, Boxer, TX12, Zorro, etc.).
+* A MicroSD card formatted as **FAT32**.
 
-### Krok 1: Podłączenie aparatury do komputera
-1. Włącz aparaturę.
-2. Podłącz ją kablem USB-C do komputera.
-3. Na ekranie aparatury wybierz opcję: **`USB Storage (SD)`**.
-4. W komputerze pojawi się dysk wymienny Twojej karty SD (np. `E:\` lub `F:\`).
+### Step 1: Connect your transmitter to PC
+1. Turn on your radio.
+2. Connect it to your PC using a USB-C cable.
+3. On the radio screen, select **`USB Storage (SD)`**.
+4. Your SD card will mount on your PC as a removable drive (e.g., `E:\` or `F:\`).
 
-### Krok 2: Kopiowanie plików
-1. Pobierz to repozytorium (kliknij zielony przycisk **`Code` -> `Download ZIP`** i wypakuj).
-2. Skopiuj foldery:
-   - 📁 **`SCRIPTS`**
-   - 📁 **`SOUNDS`**
-3. Wklej je bezpośrednio do **głównego katalogu karty SD** (nadpisz lub połącz z istniejącymi folderami).
+### Step 2: Copy Files
+1. Download this repository (click the green **`Code` ➔ `Download ZIP`** button and extract it).
+2. Copy the two main folders:
+   * 📁 **`SCRIPTS`**
+   * 📁 **`SOUNDS`**
+3. Paste them directly into the **root directory of your SD card** (merge with existing folders).
 
 > [!TIP]
-> Upewnij się, że pliki gier trafiły do `[SD]/SCRIPTS/TOOLS/`, a dźwięki do `[SD]/SOUNDS/`.
+> Ensure the Lua scripts are located in `[SD]/SCRIPTS/TOOLS/` and sound files in `[SD]/SOUNDS/`.
 
-### Krok 3: Uruchomienie gry na aparaturze
-1. Bezpiecznie odłącz kabel USB od aparatury.
-2. Przytrzymaj przycisk **`[SYS]`** na aparaturze, aby wejść w menu systemowe.
-3. Za pomocą rolki przejdź na zakładkę **`TOOLS`** (Narzędzia).
-4. Przewiń listę i wybierz dowolną grę (np. **Pocketmon**, **Pokemon**, **Doom**, **PocketPet**).
-5. Kliknij rolkę **`[ENT]`**, aby uruchomić grę!
-
----
-
-## 💻 Symulatory PC (Graj na komputerze bez radia!)
-
-Wszystkie główne gry posiadają dedykowane, w 100% wierne symulatory PC napisane w języku Python (wykorzystujące bibliotekę Tkinter wbudowaną w każdego standardowego Pythona na Windows).
-
-### Jak uruchomić symulator:
-Wejdź do folderu `simulators/` i uruchom odpowiedni plik dwuklikiem:
-- **`run_pocketmon_sim.bat`** – Uruchamia Pocketmon: Drone Edition
-- **`run_pokemon_sim.bat`** – Uruchamia Pokémon Classic Gen 1
-- **`run_pocket_pet_sim.bat`** – Uruchamia wirtualnego zwierzaka Pocket Pet
-- **`run_bad_apple_sim.bat`** – Uruchamia odtwarzacz Bad Apple!!
-
-*Wymagania PC: Zainstalowany Python 3.10+ (dostępny na python.org).*
+### Step 3: Launch on the Radio
+1. Safely eject the USB connection from your PC.
+2. Long-press the **`[SYS]`** button on your radio to enter the system menu.
+3. Use the roller wheel to navigate to the **`TOOLS`** tab.
+4. Scroll through the list and select any game (e.g., **Pocketmon**, **Pokemon**, **Doom**, **PocketPet**).
+5. Click the roller wheel **`[ENT]`** to launch and play!
 
 ---
 
-## 🎮 Tabela Sterowania / Controls Guide
+## 💻 PC Simulators (Play on Desktop without Radio)
 
-| Akcja w grze | Aparatura RadioMaster Pocket | Klawiatura PC (Symulator) |
+Every major game includes an accurate, standalone desktop simulator written in Python (using standard Tkinter, which comes pre-installed with Python on Windows).
+
+### How to run:
+Open the `simulators/` folder and double-click the desired launcher:
+* **`run_pocketmon_sim.bat`** – Launches Pocketmon: Drone Edition
+* **`run_pokemon_sim.bat`** – Launches Pokémon Classic Gen 1
+* **`run_pocket_pet_sim.bat`** – Launches Pocket Pet (Tamagotchi)
+* **`run_bad_apple_sim.bat`** – Launches Bad Apple!! PV Player
+
+*Requirements: Python 3.10+ installed from [python.org](https://www.python.org/).*
+
+---
+
+## 🎮 Controls Mapping Guide
+
+| Game Action | RadioMaster Pocket Control | PC Keyboard (Simulator) |
 | :--- | :--- | :--- |
-| **Poruszanie się (Góra/Dół/Lewo/Prawo)** | Lewy lub prawy Gimbal (drążki) | Strzałki / `W`, `A`, `S`, `D` |
-| **Wybór / Akcja / Atak / Zatwierdź** | Kliknięcie rolki **`[ENT]`** | Klawisz **`Enter`** |
-| **Powrót / Anuluj / Menu Start** | Przycisk powrotu **`[RTN]`** | Klawisz **`Esc`** / **`Backspace`** |
-| **Szybka akcja / Naprawa / Przełącznik** | Przełącznik chwilowy **`[SE]`** | Klawisz **`Spacja`** |
-| **Pauza / Zmiana widoku** | Przełącznik **`[SA]`** lub **`[SB]`** | Klawisz **`Tab`** / **`P`** |
+| **Movement (Up / Down / Left / Right)** | Left or Right Gimbal (Sticks) | Arrow Keys / `W`, `A`, `S`, `D` |
+| **Select / Confirm / Attack / Fire** | Click Roller **`[ENT]`** | **`Enter`** |
+| **Back / Cancel / Start Menu** | Return Button **`[RTN]`** | **`Esc`** / **`Backspace`** |
+| **Quick Action / Paddock Repair** | Momentary Switch **`[SE]`** | **`Spacebar`** |
+| **Mode Toggle / Switch View** | Switch **`[SA]`** / **`[SB]`** | **`Tab`** / **`P`** |
 
 ---
 
-## 📁 Struktura Katalogów Karty SD
+## 📁 SD Card Directory Structure
 
-Po skopiowaniu na kartę SD struktura powinna wyglądać następująco:
+Once copied to your SD card, your file tree will look like this:
 
 ```text
 SD_CARD_ROOT/
@@ -153,35 +160,35 @@ SD_CARD_ROOT/
 │       ├── PocketPet.lua
 │       ├── Pokemon.lua
 │       ├── Winamp.lua
-│       ├── ASTEROIDS/       (Assety graficzne i dźwiękowe)
+│       ├── ASTEROIDS/       (Graphics & audio assets)
 │       ├── BADAPPLE/        (badapple.dat, badapple.idx)
-│       ├── BREAKOUT/        (Grafiki i dźwięki)
-│       ├── POCKETMON/       (Instrukcje i konfiguracja)
-│       ├── POCKETPET/       (pet.dat – stan zapisu)
-│       ├── POKEMON/         (Instrukcje i konfiguracja)
-│       └── X-TRIS/          (Assety Tetrisa)
+│       ├── BREAKOUT/        (Bitmaps & sound effects)
+│       ├── POCKETMON/       (Config & documentation)
+│       ├── POCKETPET/       (pet.dat – persistent save)
+│       ├── POKEMON/         (Config & documentation)
+│       └── X-TRIS/          (Tetris bitmaps & sounds)
 └── SOUNDS/
-    ├── DOOM/                (Efekty strzałów, wrogów i przedmiotów)
-    ├── MUSIC/               (Utwory muzyczne, Winamp playlist, badapple.wav)
-    ├── POCKETPET/           (8-bitowe retro dźwięki Tamagotchi)
-    └── POKEMON/             (Dźwięki walki, ewolucji, bindowania i łapania)
+    ├── DOOM/                (Gunshots, monster sounds, item pickups)
+    ├── MUSIC/               (Tracks, Winamp playlist, badapple.wav)
+    ├── POCKETPET/           (8-bit retro Tamagotchi chiptunes)
+    └── POKEMON/             (Battle cries, faints, level up, catch fanfare)
 ```
 
 ---
 
-## 🛠️ Narzędzia Deweloperskie / Tools
+## 🛠️ Developer & Audio Tools
 
-W folderze `tools/` znajdują się skrypty ułatwiające rozbudowę projektu:
-- **`convert_to_edgetx_wav.bat` / `convert_music.py`**: Automatyczny konwerter dowolnych plików MP3/FLAC na wymagany przez EdgeTX format **WAV 32000Hz, 16-bit PCM, Mono** wraz z dodawaniem do `playlist.txt`.
-- **`build_pocket_pet_assets.py`**: Syntezator 8-bitowych retro dźwięków generowanych matematycznie dla Pocket Pet.
-- **`build_bad_apple.py`**: Kompresor wideo RLE oraz analityk pasm częstotliwości audio.
-- **`verify_lua.py`**: Walidator składni i domknięć bloków skryptów Lua dla EdgeTX.
+Located in the `tools/` folder:
+* **`convert_to_edgetx_wav.bat` / `convert_music.py`**: Automatically converts any MP3, FLAC, or M4A audio into the required EdgeTX format (**WAV, 32000 Hz, 16-bit PCM, Mono**) and appends it to `playlist.txt`.
+* **`build_pocket_pet_assets.py`**: Mathematical 8-bit sound synthesizer that generates all retro sound effects for Pocket Pet.
+* **`build_bad_apple.py`**: 2D RLE video frame compressor and 4-band audio frequency analyzer.
+* **`verify_lua.py`**: Static syntax and block-balance analyzer for EdgeTX Lua scripts.
 
 ---
 
-## 📄 Licencja / License
+## 📄 License & Credits
 
-Projekt jest udostępniony na otwartej licencji **MIT License**. Możesz go dowolnie modyfikować, rozwijać i dzielić się nim ze społecznością pilotów RC i entuzjastów EdgeTX!
+Distributed under the open-source **MIT License**. Feel free to fork, expand, and share with the global RC and EdgeTX pilot communities!
 
-Szczegóły w pliku [LICENSE](LICENSE).
-Twórca: **RCSIM** ([GitHub](https://github.com/RCSIM-Git))
+See the [LICENSE](LICENSE) file for complete details.  
+Created by: **RCSIM** ([GitHub](https://github.com/RCSIM-Git))
