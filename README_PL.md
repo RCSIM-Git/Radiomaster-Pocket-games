@@ -68,12 +68,13 @@ Autorskie retro RPG w świecie dronów FPV!
 - **Mechanika Bindowania ELRS:** Zamiast Pokéballi wysyłasz pakiety bindowania telemetrii ELRS!
 - **Szybka naprawa:** Przełącznik `[SE]` w padoku błyskawicznie ładuje pakiety LiPo Twojej floty.
 
-### 2. 🥚 PocketPet: Wirtualny Zwierzak / Tamagotchi (`PocketPet.lua`)
-Kultowy wirtualny zwierzak retro na Twoim radiu!
-- **Cykl życia:** Wykluwanie jajka, faza niemowlaka, dziecka oraz dorosłe ewolucje (m.in. Drone-Pet, Pika-Pet, Dino-Pet).
-- **Opieka:** Karmienie (jabłka / baterie), sprzątanie odchodów prysznicem, gaszenie światła do snu, leczenie chorób.
-- **Minigra zręcznościowa:** Łap spadające baterie i unikaj bomb gimbalem aparatury!
-- **Stały zapis:** Stan Twojego zwierzaka zapisuje się na karcie SD (`pet.dat`).
+### 2. 🥚 PocketPet: Wirtualny Dron FPV (`PocketPet.lua`)
+Zaawansowany symulator wirtualnego zwierzaka-drona w stylu retro na Twoim nadajniku:
+- **Cykl życia:** 4 etapy ewolucji floty: Skrzynia transportowa (Jajko) ➔ TinyWhoop (Baby) ➔ Toothpick 3" (Child) ➔ Dorosły quad (5" Freestyle Beast, Cinewhoop 4K Pro lub Skrzydło FPV Wing)!
+- **Obsługa i opieka:** Ładowanie pakietów LiPo, czyszczenie silników z trawy i brudu, kalibracja ESC, tryb uśpienia i serwis elektroniki.
+- **Minigra zręcznościowa:** "Catch the Battery" – steruj dronem za pomocą drążków aparatury, łap spadające pakiety LiPo i unikaj zakłóceń!
+- **Telemetria na żywo:** PocketPet odczytuje rzeczywiste napięcie akumulatora Twojej aparatury i na bieżąco je komentuje!
+- **Stały zapis:** Postęp i stan Twojego drona automatycznie zapisują się na karcie SD (`pet.dat`).
 
 ### 3. 💀 DOOM: Pocket Edition (`Doom.lua`)
 Prawdziwy silnik 3D Raycasting (pseudo-3D wolfenstein/doom) renderowany w czasie rzeczywistym na monochromatycznym ekranie LCD 128x64!

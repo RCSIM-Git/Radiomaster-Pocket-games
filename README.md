@@ -72,11 +72,12 @@ An original retro RPG tailored for the FPV drone community!
 * **ELRS Telemetry Binding:** Instead of throwing Pokéballs, transmit **`BIND PACKETS`** over ExpressLRS to bind rogue drones directly into your radio's Model Hangar!
 * **Paddock Quick-Repair:** Flip momentary switch `[SE]` at the hangar paddock to instantly recharge all your LiPos.
 
-### 2. 🥚 PocketPet: Virtual Pet / Tamagotchi (`PocketPet.lua`)
-A full-featured virtual pet simulation running on your RC radio:
-* **Life Cycle:** Egg incubation, hatching ceremony, baby, child, and adult evolution forms (including Drone-Pet, Pika-Pet, and Dino-Pet).
-* **Care System:** Feed with apples or recharge with batteries, clean poop with water showers, turn off lights for sleep, and treat illnesses.
-* **Arcade Mini-Game:** Catch falling batteries and dodge bombs/glitches using the transmitter gimbals!
+### 2. 🥚 PocketPet: FPV Drone Virtual Pet (`PocketPet.lua`)
+A full-featured virtual drone pet simulation running on your RC radio:
+* **Life Cycle:** 4 Evolution Stages: Flight Case (Egg) ➔ TinyWhoop (Baby) ➔ Toothpick 3" (Child) ➔ Adult Fleet (5" Freestyle Beast, Cinewhoop 4K Pro, or FPV Flying Wing)!
+* **Care System:** Charge LiPo batteries, clean grass/dirt from motors, calibrate ESCs, sleep mode, and service electronics.
+* **Arcade Mini-Game:** "Catch the Battery" – pilot your drone with the transmitter gimbals to catch falling LiPos while dodging glitches!
+* **Telemetry Integration:** PocketPet reads your radio's actual battery voltage and comments on your charge levels!
 * **Battery-Backed Save State:** Progress automatically persists to `pet.dat` on the SD card.
 
 ### 3. 💀 DOOM: Pocket Edition (`Doom.lua`)

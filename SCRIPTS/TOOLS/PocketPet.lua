@@ -25,8 +25,8 @@ local STAGE_EGG = 0
 local STAGE_BABY = 1
 local STAGE_CHILD = 2
 local STAGE_ADULT_DRONE = 3
-local STAGE_ADULT_PIKA = 4
-local STAGE_ADULT_DINO = 5
+local STAGE_ADULT_CINE = 4
+local STAGE_ADULT_WING = 5
 
 -- Game Modes / Screens
 local MODE_MAIN = 0
@@ -242,10 +242,10 @@ local function checkEvolution()
                 pet.stage = STAGE_ADULT_DRONE -- 5" Freestyle
                 triggerMessage("EVOLUTION: 5\" Freestyle Beast Unlocked!", 250)
             elseif battV >= 7.8 and pet.careMistakes <= 2 then
-                pet.stage = STAGE_ADULT_PIKA -- Cinewhoop
+                pet.stage = STAGE_ADULT_CINE -- Cinewhoop
                 triggerMessage("EVOLUTION: Cinewhoop 4K Pro Unlocked!", 250)
             else
-                pet.stage = STAGE_ADULT_DINO -- FPV Wing
+                pet.stage = STAGE_ADULT_WING -- FPV Wing
                 triggerMessage("EVOLUTION: FPV Flying Wing Unlocked!", 250)
             end
             playSfx("win.wav")
@@ -840,8 +840,8 @@ local function drawStatusBar()
     if pet.stage == STAGE_BABY then sName = "WHOOP"
     elseif pet.stage == STAGE_CHILD then sName = "TOOTH"
     elseif pet.stage == STAGE_ADULT_DRONE then sName = "5\"BEAST"
-    elseif pet.stage == STAGE_ADULT_PIKA then sName = "CINE"
-    elseif pet.stage == STAGE_ADULT_DINO then sName = "WING"
+    elseif pet.stage == STAGE_ADULT_CINE then sName = "CINE"
+    elseif pet.stage == STAGE_ADULT_WING then sName = "WING"
     end
     lcd.drawText(2, 13, sName, SMLSIZE)
 
@@ -903,9 +903,9 @@ local function drawPlayfield()
         drawToothpickQuad(petX, petY + 4, animFrame)
     elseif pet.stage == STAGE_ADULT_DRONE then
         drawFreestyle5Inch(petX, petY + 4, animFrame)
-    elseif pet.stage == STAGE_ADULT_PIKA then
+    elseif pet.stage == STAGE_ADULT_CINE then
         drawCinewhoop(petX, petY + 4, animFrame)
-    elseif pet.stage == STAGE_ADULT_DINO then
+    elseif pet.stage == STAGE_ADULT_WING then
         drawFPVWing(petX, petY + 4, animFrame)
     end
 
