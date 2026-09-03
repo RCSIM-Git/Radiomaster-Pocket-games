@@ -72,48 +72,32 @@ An original retro RPG tailored for the FPV drone community!
 * **ELRS Telemetry Binding:** Instead of throwing Pokéballs, transmit **`BIND PACKETS`** over ExpressLRS to bind rogue drones directly into your radio's Model Hangar!
 * **Paddock Quick-Repair:** Flip momentary switch `[SE]` at the hangar paddock to instantly recharge all your LiPos.
 
-### 2. ⚡ Pokémon Classic: Gen 1 (`Pokemon.lua`)
-An authentic recreation of the legendary Game Boy Pokémon Red/Blue experience:
-* **Starters:** Choose from Pikachu, Charmander, Squirtle, or Bulbasaur.
-* **Tile-based Overworld:** Pallet Town, Route 1, wild tall grass, buildings, and collision physics.
-* **Turn-Based Combat Engine:** Dynamic HP gauges, genuine attack animations (Thundershock, Ember, Vine Whip, Quick Attack), Pokéball throwing physics, and battle exp gains.
-* **Persistent Saves:** Game progress saves directly to the SD card.
-
-### 3. 🥚 PocketPet: Virtual Pet / Tamagotchi (`PocketPet.lua`)
+### 2. 🥚 PocketPet: Virtual Pet / Tamagotchi (`PocketPet.lua`)
 A full-featured virtual pet simulation running on your RC radio:
 * **Life Cycle:** Egg incubation, hatching ceremony, baby, child, and adult evolution forms (including Drone-Pet, Pika-Pet, and Dino-Pet).
 * **Care System:** Feed with apples or recharge with batteries, clean poop with water showers, turn off lights for sleep, and treat illnesses.
 * **Arcade Mini-Game:** Catch falling batteries and dodge bombs/glitches using the transmitter gimbals!
 * **Battery-Backed Save State:** Progress automatically persists to `pet.dat` on the SD card.
 
-### 4. 💀 DOOM: Pocket Edition (`Doom.lua`)
+### 3. 💀 DOOM: Pocket Edition (`Doom.lua`)
 A real-time 3D Raycasting first-person shooter engine running at a smooth 30 FPS on a 128x64 monochrome display:
 * **High-Performance Raycaster:** 64 rays cast in real time with distance shading.
 * **Weapons:** Pistol and a devastating Shotgun with muzzle flash, recoil animation, and sound effects.
 * **Enemies & Levels:** Imp demons roaming dungeon corridors, item pickups, and live mini-map navigation.
 
-### 5. 🍎 Bad Apple!! PV Player (`BadApple.lua`)
+### 4. 🍎 Bad Apple!! PV Player (`BadApple.lua`)
 The iconic *Bad Apple!!* music video streamed directly on your transmitter:
 * **Smooth 20 FPS Video Streaming:** Powered by a customized high-speed 2D RLE rectangle decompression engine.
 * **Synchronized Audio:** 32kHz 16-bit PCM mono audio playback.
 * **Live Hardware Spectrum Analyzer:** Real-time 4-band audio EQ visualizer animated alongside the video in retro 4:3 theater mode.
 
-### 6. 📻 Winamp Retro Player (`Winamp.lua`)
+### 5. 📻 Winamp Retro Player (`Winamp.lua`)
 The classic Winamp 2.91 MP3 player brought to EdgeTX:
 * **Retro Interface:** Animated 10-bar graphic equalizer with falling peak meters.
 * **Big LCD Timer:** Digital MM:SS segment display, bitrate, and sample rate indicators.
 * **Smooth Marquee:** Horizontal scrolling ticker for song titles.
 * **Full Playlist Support:** Prev, Play, Pause, Stop, Next, Repeat, Shuffle, and progress seek bar.
 * **Audio Routing:** Listen via the built-in radio speaker or the 3.5mm headphone jack.
-
-### 7. 🕹️ Retro Arcade Pack
-Classic arcade games fine-tuned for radio gimbals and roller controls:
-* **`Game-Asteroids.lua`**: Space shooter with rock fragmentation, thruster physics, and sound effects.
-* **`Game-Breakout.lua`**: Classic brick-breaker paddle game.
-* **`Game-Pong.lua`**: 1v1 paddle duel against AI.
-* **`Game-Snake.lua`**: Retro arcade snake collecting apples.
-* **`Game-Simulator.lua`**: Lightweight stick flight simulator.
-* **`Game-X-Tris.lua`**: Full-featured Tetris with custom splash screens and sound effects.
 
 ---
 
@@ -155,7 +139,6 @@ Every major game includes an accurate, standalone desktop simulator written in P
 ### How to run:
 Open the `simulators/` folder and double-click the desired launcher:
 * **`run_pocketmon_sim.bat`** – Launches Pocketmon: Drone Edition
-* **`run_pokemon_sim.bat`** – Launches Pokémon Classic Gen 1
 * **`run_pocket_pet_sim.bat`** – Launches Pocket Pet (Tamagotchi)
 * **`run_bad_apple_sim.bat`** – Launches Bad Apple!! PV Player
 
@@ -185,28 +168,17 @@ SD_CARD_ROOT/
 │   └── TOOLS/
 │       ├── BadApple.lua
 │       ├── Doom.lua
-│       ├── Game-Asteroids.lua
-│       ├── Game-Breakout.lua
-│       ├── Game-Pong.lua
-│       ├── Game-Simulator.lua
-│       ├── Game-Snake.lua
-│       ├── Game-X-Tris.lua
 │       ├── Pocketmon.lua
 │       ├── PocketPet.lua
-│       ├── Pokemon.lua
 │       ├── Winamp.lua
-│       ├── ASTEROIDS/       (Graphics & audio assets)
 │       ├── BADAPPLE/        (badapple.dat, badapple.idx)
-│       ├── BREAKOUT/        (Bitmaps & sound effects)
 │       ├── POCKETMON/       (Config & documentation)
-│       ├── POCKETPET/       (pet.dat – persistent save)
-│       ├── POKEMON/         (Config & documentation)
-│       └── X-TRIS/          (Tetris bitmaps & sounds)
+│       └── POCKETPET/       (pet.dat – persistent save)
 └── SOUNDS/
     ├── DOOM/                (Gunshots, monster sounds, item pickups)
     ├── MUSIC/               (Tracks, Winamp playlist, badapple.wav)
     ├── POCKETPET/           (8-bit retro Tamagotchi chiptunes)
-    └── POKEMON/             (Battle cries, faints, level up, catch fanfare)
+    └── POCKETMON/           (FPV drone moves, telemetry binds, level up)
 ```
 
 ---

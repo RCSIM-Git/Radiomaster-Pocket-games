@@ -68,47 +68,32 @@ Autorskie retro RPG w świecie dronów FPV!
 - **Mechanika Bindowania ELRS:** Zamiast Pokéballi wysyłasz pakiety bindowania telemetrii ELRS!
 - **Szybka naprawa:** Przełącznik `[SE]` w padoku błyskawicznie ładuje pakiety LiPo Twojej floty.
 
-### 2. ⚡ Pokémon Classic: Gen 1 (`Pokemon.lua`)
-Wierne odtworzenie kultowego Pokémon Red/Blue z Game Boya dostosowane do ekranu 128x64:
-- **Startery:** Pikachu, Charmander, Squirtle, Bulbasaur.
-- **Eksploracja:** Pallet Town, Route 1, dzika trawa, mechanika losowych spotkań.
-- **Turowy System Walki:** Paski HP, animacje ataków (Thundershock, Ember, Vine Whip), rzucanie Pokéballami i zapis stanu gry.
-
-### 3. 🥚 PocketPet: Wirtualny Zwierzak / Tamagotchi (`PocketPet.lua`)
+### 2. 🥚 PocketPet: Wirtualny Zwierzak / Tamagotchi (`PocketPet.lua`)
 Kultowy wirtualny zwierzak retro na Twoim radiu!
 - **Cykl życia:** Wykluwanie jajka, faza niemowlaka, dziecka oraz dorosłe ewolucje (m.in. Drone-Pet, Pika-Pet, Dino-Pet).
 - **Opieka:** Karmienie (jabłka / baterie), sprzątanie odchodów prysznicem, gaszenie światła do snu, leczenie chorób.
 - **Minigra zręcznościowa:** Łap spadające baterie i unikaj bomb gimbalem aparatury!
 - **Stały zapis:** Stan Twojego zwierzaka zapisuje się na karcie SD (`pet.dat`).
 
-### 4. 💀 DOOM: Pocket Edition (`Doom.lua`)
+### 3. 💀 DOOM: Pocket Edition (`Doom.lua`)
 Prawdziwy silnik 3D Raycasting (pseudo-3D wolfenstein/doom) renderowany w czasie rzeczywistym na monochromatycznym ekranie LCD 128x64!
 - **Płynny raycasting:** 64 promienie renderowane w ~30 FPS.
 - **Arsenał:** Pistolet oraz potężny Shotgun z animacją strzału i odrzutu.
 - **Przeciwnicy:** Demony czające się w korytarzach, minimapa podglądu pozycji oraz efekty dźwiękowe.
 
-### 5. 🍎 Bad Apple!! PV Player (`BadApple.lua`)
+### 4. 🍎 Bad Apple!! PV Player (`BadApple.lua`)
 Legendarna animacja *Bad Apple!!* odtwarzana bezpośrednio na aparaturze:
 - **Płynny strumień wideo:** 20 FPS przy użyciu wydajnego silnika dekompresji prostokątów RLE.
 - **Zsynchronizowany dźwięk:** Jakość 32kHz 16-bit PCM Mono.
 - **Spektrum audio:** Równolegle animowany 4-pasmowy analizator widma audio na żywo.
 
-### 6. 📻 Winamp Retro Player (`Winamp.lua`)
+### 5. 📻 Winamp Retro Player (`Winamp.lua`)
 Kultowy odtwarzacz muzyczny Winamp 2.91 na Twoim nadajniku:
 - **Interfejs retro:** 10-słupkowy animowany korektor graficzny (Spectrum Analyzer) z opadającymi pikami.
 - **Duży licznik czasu:** Wyświetlacz segmentowy MM:SS, wskaźniki bitrate i częstotliwości.
 - **Płynny Marquee:** Przewijane tytuły odtwarzanych utworów.
 - **Playlista i sterowanie:** Play, Pause, Prev, Next, Repeat, Shuffle, przewijanie paska postępu.
 - **Dźwięk:** Odsłuch przez wbudowany głośniczek lub wyjście słuchawkowe jack 3.5mm w aparaturze!
-
-### 7. 🕹️ Retro Arcade Pack
-Zestaw klasycznych gier zręcznościowych przygotowanych pod gimbale aparatury:
-- **`Game-Asteroids.lua`**: Kosmiczna strzelanka z niszczeniem asteroid i efektami dźwiękowymi.
-- **`Game-Breakout.lua`**: Klasyczny Arkanoid / niszczenie cegiełek paletką i piłką.
-- **`Game-Pong.lua`**: Pojedynek z komputerowym przeciwnikiem na punkty.
-- **`Game-Snake.lua`**: Nieśmiertelny wąż zbierający punkty na ekranie.
-- **`Game-Simulator.lua`**: Mini-symulator lotu samolotem rc kontrolowany drążkami.
-- **`Game-X-Tris.lua`**: Klasyczny Tetris z pełną oprawą graficzną i dźwiękami.
 
 ---
 
@@ -150,7 +135,6 @@ Wszystkie główne gry posiadają dedykowane, w 100% wierne symulatory PC napisa
 ### Jak uruchomić symulator:
 Wejdź do folderu `simulators/` i uruchom odpowiedni plik dwuklikiem:
 - **`run_pocketmon_sim.bat`** – Uruchamia Pocketmon: Drone Edition
-- **`run_pokemon_sim.bat`** – Uruchamia Pokémon Classic Gen 1
 - **`run_pocket_pet_sim.bat`** – Uruchamia wirtualnego zwierzaka Pocket Pet
 - **`run_bad_apple_sim.bat`** – Uruchamia odtwarzacz Bad Apple!!
 
@@ -180,28 +164,17 @@ SD_CARD_ROOT/
 │   └── TOOLS/
 │       ├── BadApple.lua
 │       ├── Doom.lua
-│       ├── Game-Asteroids.lua
-│       ├── Game-Breakout.lua
-│       ├── Game-Pong.lua
-│       ├── Game-Simulator.lua
-│       ├── Game-Snake.lua
-│       ├── Game-X-Tris.lua
 │       ├── Pocketmon.lua
 │       ├── PocketPet.lua
-│       ├── Pokemon.lua
 │       ├── Winamp.lua
-│       ├── ASTEROIDS/       (Assety graficzne i dźwiękowe)
 │       ├── BADAPPLE/        (badapple.dat, badapple.idx)
-│       ├── BREAKOUT/        (Grafiki i dźwięki)
 │       ├── POCKETMON/       (Instrukcje i konfiguracja)
-│       ├── POCKETPET/       (pet.dat – stan zapisu)
-│       ├── POKEMON/         (Instrukcje i konfiguracja)
-│       └── X-TRIS/          (Assety Tetrisa)
+│       └── POCKETPET/       (pet.dat – stan zapisu)
 └── SOUNDS/
     ├── DOOM/                (Efekty strzałów, wrogów i przedmiotów)
     ├── MUSIC/               (Utwory muzyczne, Winamp playlist, badapple.wav)
     ├── POCKETPET/           (8-bitowe retro dźwięki Tamagotchi)
-    └── POKEMON/             (Dźwięki walki, ewolucji, bindowania i łapania)
+    └── POCKETMON/           (Dźwięki quadów, manewry FPV, bindowanie ELRS)
 ```
 
 ---

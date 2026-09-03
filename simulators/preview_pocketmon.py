@@ -27,7 +27,7 @@ import math
 try:
     import winsound
     def play_wav(filename):
-        path = find_asset(os.path.join("SOUNDS", "POKEMON", filename))
+        path = find_asset(os.path.join("SOUNDS", "POCKETMON", filename))
         if os.path.exists(path):
             winsound.PlaySound(path, winsound.SND_FILENAME | winsound.SND_ASYNC)
 except ImportError:

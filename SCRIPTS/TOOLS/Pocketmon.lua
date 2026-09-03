@@ -39,7 +39,7 @@ local battleMsg = ""
 
 -- Audio SFX Player
 local function playSfx(file)
-    playFile("/SOUNDS/POKEMON/" .. file)
+    playFile("/SOUNDS/POCKETMON/" .. file)
 end
 
 --------------------------------------------------------------------------------
