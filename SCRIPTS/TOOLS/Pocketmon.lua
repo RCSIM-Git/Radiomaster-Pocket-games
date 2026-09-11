@@ -427,12 +427,13 @@ local SAVE_PATH = "/SCRIPTS/TOOLS/POCKETMON/save.dat"
 local function saveGame()
     local f = io.open(SAVE_PATH, "w")
     if f then
-        f:write(string.format("%d,%d,%d,%d\n", playerX, playerY, bag.packets, bag.lipos))
-        f:write(string.format("%d\n", #hangar))
+        local data = string.format("%d,%d,%d,%d\n", playerX, playerY, bag.packets, bag.lipos)
+        data = data .. string.format("%d\n", #hangar)
         for i = 1, #hangar do
             local p = hangar[i]
-            f:write(string.format("%s,%d,%d,%d,%d,%d\n", p.key, p.level, p.hp, p.maxHp, p.atk, p.exp))
+            data = data .. string.format("%s,%d,%d,%d,%d,%d\n", p.key, p.level, p.hp, p.maxHp, p.atk, p.exp)
         end
+        io.write(f, data)
         io.close(f)
         playSfx("catch.wav")
         triggerDialogue("HANGAR SAVED SAFELY!", STATE_OVERWORLD, 150)
@@ -441,33 +442,52 @@ end
 
 local function loadGame()
     local f = io.open(SAVE_PATH, "r")
-    if f then
-        local line1 = io.readline(f)
-        if line1 then
-            local parts = {}
-            for val in string.gmatch(line1, "[^,]+") do
-                parts[#parts + 1] = tonumber(val)
-            end
-            if #parts >= 4 then
-                playerX = parts[1]
-                playerY = parts[2]
-                bag.packets = parts[3]
-                bag.lipos = parts[4]
-            end
-            local lineCount = io.readline(f)
-            local pCount = tonumber(lineCount) or 0
-            hangar = {}
-            for i = 1, pCount do
-                local pLine = io.readline(f)
-                if pLine then
-                    local pParts = {}
-                    for v in string.gmatch(pLine, "[^,]+") do
-                        pParts[#pParts + 1] = v
-                    end
-                    if #pParts >= 6 then
-                        local dKey = pParts[1]
-                        local pLvl = tonumber(pParts[2]) or 5
-                        local pk = createDrone(dKey, pLvl)
+    if not f then return false end
+
+    local content = ""
+    while true do
+        local chunk = io.read(f, 256)
+        if not chunk or #chunk == 0 then break end
+        content = content .. chunk
+    end
+    io.close(f)
+
+    if #content == 0 then return false end
+
+    local lines = {}
+    for line in string.gmatch(content, "[^\r\n]+") do
+        lines[#lines + 1] = line
+    end
+
+    if #lines < 1 then return false end
+
+    local line1 = lines[1]
+    local parts = {}
+    for val in string.gmatch(line1, "[^,]+") do
+        parts[#parts + 1] = tonumber(val)
+    end
+    if #parts >= 4 then
+        playerX = parts[1]
+        playerY = parts[2]
+        bag.packets = parts[3]
+        bag.lipos = parts[4]
+    end
+
+    if #lines >= 2 then
+        local pCount = tonumber(lines[2]) or 0
+        hangar = {}
+        for i = 1, pCount do
+            local pLine = lines[2 + i]
+            if pLine then
+                local pParts = {}
+                for v in string.gmatch(pLine, "[^,]+") do
+                    pParts[#pParts + 1] = v
+                end
+                if #pParts >= 6 then
+                    local dKey = pParts[1]
+                    local pLvl = tonumber(pParts[2]) or 5
+                    local pk = createDrone(dKey, pLvl)
+                    if pk then
                         pk.hp = tonumber(pParts[3]) or pk.maxHp
                         pk.maxHp = tonumber(pParts[4]) or pk.maxHp
                         pk.atk = tonumber(pParts[5]) or pk.atk
@@ -477,10 +497,8 @@ local function loadGame()
                 end
             end
         end
-        io.close(f)
-        return true
     end
-    return false
+    return true
 end
 
 --------------------------------------------------------------------------------
