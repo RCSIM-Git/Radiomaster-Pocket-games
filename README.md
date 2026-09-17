@@ -119,13 +119,10 @@ Nostalgic recreation of the famous 1980s mechanical tabletop dashboard toy:
 * **2-Speed Shifter:** Toggle Switch `[SB]` between LOW (0-60 km/h) and HIGH (up to 160 km/h!).
 * **Fuel & Odometer:** Dodge obstacle vehicles, pick up fuel canisters, and rack up odometer distance before running dry.
 
-### 9. 🕹️ Retro Arcade Classics Suite
-* **`Game-Breakout.lua`**: Classic brick breaker featuring full sound effects (`BREAKOUT/snd`), graphics (`BREAKOUT/gfx`), and dual input support (sticks and wheel).
-* **`Game-Asteroids.lua`**: Space shooter with inertia physics, thrusters, hyperspace, firing, and complete sound effects (`ASTEROIDS/`).
-* **`Game-X-Tris.lua`**: Tetromino falling-block puzzle with rotation, line clearing sound effects, level progression, and stats (`X-TRIS/`).
-* **`Game-Pong-MT12.lua` & `Game-Pong.lua`**: Arcade table tennis with AI opponent and smash mechanics.
-* **`Game-Snake-MT12.lua` & `Game-Snake.lua`**: Retro snake with speed boost.
-* **`Game-Simulator.lua`**: RC aircraft/helicopter precision obstacle flight trainer with record tracking.
+### 9. 🏓 Pong MT12 & 🐍 Snake MT12 (`Game-Pong-MT12.lua`, `Game-Snake-MT12.lua`)
+Arcade games optimized for EdgeTX 128x64 transmitters:
+* **`Game-Pong-MT12.lua`**: Fast arcade table tennis with AI opponent, smash mechanics, and analog paddle control.
+* **`Game-Snake-MT12.lua`**: Retro classic snake with trigger/stick boost mode.
 
 ### 10. ⏱️ Surface RC Utilities
 * **`CarTuner.lua`**: RC curve, expo, and setup visualizer with profiles for Buggy, Drift, Crawler, and Rally.
@@ -203,23 +200,14 @@ SD_CARD_ROOT/
 │       ├── Game-CarPet.lua
 │       ├── Game-RCRacer.lua
 │       ├── Game-TomyTurbo.lua
-│       ├── Game-Breakout.lua
-│       ├── Game-Asteroids.lua
-│       ├── Game-X-Tris.lua
 │       ├── Game-Pong-MT12.lua
-│       ├── Game-Pong.lua
 │       ├── Game-Snake-MT12.lua
-│       ├── Game-Snake.lua
-│       ├── Game-Simulator.lua
 │       ├── CarTuner.lua
 │       ├── LapTimer.lua
-│       ├── ASTEROIDS/       (gfx, snd)
 │       ├── BADAPPLE/        (badapple.dat, badapple.idx)
-│       ├── BREAKOUT/        (gfx, snd)
 │       ├── CARPET/          (carpet.dat – persistent garage save)
 │       ├── POCKETMON/       (Config & documentation)
-│       ├── POCKETPET/       (pet.dat – persistent drone save)
-│       └── X-TRIS/          (gfx, snd)
+│       └── POCKETPET/       (pet.dat – persistent drone save)
 └── SOUNDS/
     ├── DOOM/                (Gunshots, monster sounds, item pickups)
     ├── MUSIC/               (Tracks, PocketAmp playlist, badapple.wav)

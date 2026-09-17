@@ -115,13 +115,10 @@ Nostalgiczna gra inspirowana kultową zabawką mechaniczną z lat 80. "Tomy Turb
 - **2-biegowa skrzynia biegów:** Przełącznik `[SB]` przełącza między biegiem LOW (0-60 km/h) a HIGH (do 160 km/h!).
 - **Paliwo i licznik:** Omijaj przeszkody, zbieraj kanistry z paliwem i nabijaj kilometry na liczniku.
 
-### 9. 🕹️ Pakiet Gier Retro Arcade
-- **`Game-Breakout.lua`**: Klasyczny arkanoid z pełnymi efektami dźwiękowymi (`BREAKOUT/snd`), grafiką (`BREAKOUT/gfx`) oraz wsparciem dla drążków i kierownicy MT12.
-- **`Game-Asteroids.lua`**: Kosmiczna strzelanka z fizyką bezwładności, dopalaczem, nadprzestrzenią i pełnym audio (`ASTEROIDS/`).
-- **`Game-X-Tris.lua`**: Klasyczny Tetris z obrotem klocków, dźwiękami zbijania linii, poziomami trudności i statystykami (`X-TRIS/`).
-- **`Game-Pong-MT12.lua` & `Game-Pong.lua`**: Klasyczny Pong z przeciwnikiem AI i podkręcaniem piłki (smash).
-- **`Game-Snake-MT12.lua` & `Game-Snake.lua`**: Klasyczny wąż z trybem turbo przyspieszenia.
-- **`Game-Simulator.lua`**: Trener precyzji pilotażu śmigłowcem/samolotem RC z torem przeszkód i pomiarem czasu.
+### 9. 🏓 Pong MT12 & 🐍 Snake MT12 (`Game-Pong-MT12.lua`, `Game-Snake-MT12.lua`)
+Gry zręcznościowe zoptymalizowane pod nadajniki EdgeTX 128x64:
+- **`Game-Pong-MT12.lua`**: Szybki tenis stołowy z przeciwnikiem AI, podkręcaniem piłki (smash) i płynnym ruchem paletki.
+- **`Game-Snake-MT12.lua`**: Klasyczny retro wąż z trybem turbo boost.
 
 ### 10. ⏱️ Narzędzia dla Modeli Kołowych (Surface RC)
 - **`CarTuner.lua`**: Wizualizator krzywych kierownicy, gazu i Expo z gotowymi profilami pod Buggy, Drift, Crawler i Rajdy.
@@ -200,23 +197,14 @@ SD_CARD_ROOT/
 │       ├── Game-CarPet.lua
 │       ├── Game-RCRacer.lua
 │       ├── Game-TomyTurbo.lua
-│       ├── Game-Breakout.lua
-│       ├── Game-Asteroids.lua
-│       ├── Game-X-Tris.lua
 │       ├── Game-Pong-MT12.lua
-│       ├── Game-Pong.lua
 │       ├── Game-Snake-MT12.lua
-│       ├── Game-Snake.lua
-│       ├── Game-Simulator.lua
 │       ├── CarTuner.lua
 │       ├── LapTimer.lua
-│       ├── ASTEROIDS/       (gfx, snd)
 │       ├── BADAPPLE/        (badapple.dat, badapple.idx)
-│       ├── BREAKOUT/        (gfx, snd)
 │       ├── CARPET/          (carpet.dat – stan zapisu)
 │       ├── POCKETMON/       (Instrukcje i konfiguracja)
-│       ├── POCKETPET/       (pet.dat – stan zapisu)
-│       └── X-TRIS/          (gfx, snd)
+│       └── POCKETPET/       (pet.dat – stan zapisu)
 └── SOUNDS/
     ├── DOOM/                (Efekty strzałów, wrogów i przedmiotów)
     ├── MUSIC/               (Utwory muzyczne, PocketAmp playlist, badapple.wav)
