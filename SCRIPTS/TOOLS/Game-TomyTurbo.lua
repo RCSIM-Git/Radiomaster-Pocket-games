@@ -104,6 +104,18 @@ local function initGame()
   playTone(1200, 150, 0)
 end
 
+local function init()
+  playerX = 64
+  speed = 0
+  fuel = 100
+  odometer = 0
+  obstacles = {}
+  fuelCans = {}
+  curveAngle = 0
+  roadCurveTarget = 0
+  state = "OFF"
+end
+
 local function spawnItems()
   local now = getTime()
   if now - lastSpawn > 40 then
@@ -164,15 +176,16 @@ local function run(event)
 
   if state == "OFF" then
     lcd.drawFilledRectangle(0, 0, 128, 11, 1)
-    lcd.drawText(10, 2, "TOMY TURBO DASHBOARD", INVERS + BOLD)
+    lcd.drawText(2, 2, "TOMY TURBO", INVERS + BOLD)
+    lcd.drawText(80, 2, "by RCSIM", INVERS + SMLSIZE)
 
-    lcd.drawText(6, 16, "KULTOWA GRA WYSCIGOWA 80s", SMLSIZE + BOLD)
+    lcd.drawText(6, 16, "TURBO RACING by RCSIM", SMLSIZE + BOLD)
     lcd.drawText(6, 26, "- Rolka [ENT] / Spust: Start", SMLSIZE)
     lcd.drawText(6, 35, "- Skrzynia [SB]: LOW / HIGH", SMLSIZE)
     lcd.drawText(6, 44, "- Kierownica: Sterowanie", SMLSIZE)
     lcd.drawText(6, 53, "- Spust: Gaz i Hamulec", SMLSIZE)
 
-    if sa > 200 or th > 0.3 then
+    if sa > 200 or th > 0.3 or isEnter(event) then
       initGame()
     end
     return 0
@@ -362,4 +375,4 @@ local function run(event)
   return 0
 end
 
-return { run = run, init = initGame }
+return { run = run, init = init }

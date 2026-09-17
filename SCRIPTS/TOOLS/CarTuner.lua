@@ -131,7 +131,7 @@ local function run(event)
   -- NAGŁÓWEK (y: 0 .. 9)
   -- ====================================================================
   lcd.drawFilledRectangle(0, 0, 128, 10, 1)
-  lcd.drawText(2, 1, "CAR TUNER: " .. prof.name, INVERS + SMLSIZE)
+  lcd.drawText(2, 1, "CAR TUNER by RCSIM", INVERS + SMLSIZE)
 
   local modeLabel = (viewMode == 1) and "[PROFIL]" or "[LIVE-OSD]"
   lcd.drawText(86, 1, modeLabel, INVERS + SMLSIZE)

@@ -44,8 +44,9 @@ local MODE_MAIN = 0
 local MODE_STATS = 1
 local MODE_MINIGAME = 2
 local MODE_ANIM = 3
+local MODE_SPLASH = 4
 
-local currentMode = MODE_MAIN
+local currentMode = MODE_SPLASH
 local animText = ""
 local animTimer = 0
 local animType = ""
@@ -334,6 +335,7 @@ end
 local function init()
   loadState()
   pet.lastTick = getTime()
+  currentMode = MODE_SPLASH
 end
 
 local function run(event)
@@ -344,8 +346,30 @@ local function run(event)
   local st = getSteering()
   local th = getThrottle()
 
+  -- 0. EKRAN POWITALNY / STARTOWY (MODE_SPLASH)
+  if currentMode == MODE_SPLASH then
+    lcd.drawFilledRectangle(0, 0, 128, 11, 1)
+    lcd.drawText(2, 2, "CARPET: RC GARAGE", INVERS + BOLD)
+    lcd.drawText(80, 2, "by RCSIM", INVERS + SMLSIZE)
+
+    drawCarSprite(64, 31, pet.stage)
+
+    lcd.drawText(42, 42, "by RCSIM", SMLSIZE + BOLD)
+
+    lcd.drawLine(0, 52, 127, 52, SOLID, 1)
+    lcd.drawText(8, 55, "[Wcisnij Rolke / Gaz] WEJDZ", SMLSIZE + BOLD)
+
+    if isEnter(event) or th > 300 then
+      currentMode = MODE_MAIN
+      playTone(1800, 100, 0)
+    end
+    if isExit(event) then
+      return 2
+    end
+    return 0
+
   -- 1. EKRAN ANIMACJI / KOMUNIKATU
-  if currentMode == MODE_ANIM then
+  elseif currentMode == MODE_ANIM then
     lcd.drawFilledRectangle(10, 12, 108, 40, 0)
     lcd.drawRectangle(10, 12, 108, 40)
     lcd.drawFilledRectangle(11, 13, 106, 10, 1)
@@ -362,7 +386,7 @@ local function run(event)
   -- 2. EKRAN STATYSTYK (MODE_STATS)
   elseif currentMode == MODE_STATS then
     lcd.drawFilledRectangle(0, 0, 128, 10, 1)
-    lcd.drawText(2, 1, "STATYSTYKI GARAZU MT12", INVERS + SMLSIZE)
+    lcd.drawText(2, 1, "GARAZ MT12 by RCSIM", INVERS + SMLSIZE)
 
     lcd.drawText(2, 13, "Model: " .. STAGE_NAMES[pet.stage], SMLSIZE + BOLD)
     lcd.drawText(2, 22, string.format("Przebieg: %d km", pet.odometer), SMLSIZE)

@@ -18,6 +18,7 @@ local paddleW = 3
 local scorePlayer = 0
 local scoreAi = 0
 local rallyCount = 0
+local isStarted = false
 
 local function isExit(event)
   if not event or event == 0 then return false end
@@ -77,12 +78,35 @@ local function init()
   scorePlayer = 0
   scoreAi = 0
   resetBall(false)
+  isStarted = false
 end
 
 local function run(event)
   if isExit(event) then return 2 end
 
   lcd.clear()
+
+  -- Ekran startowy
+  if not isStarted then
+    lcd.drawFilledRectangle(0, 0, 128, 11, 1)
+    lcd.drawText(4, 2, "PONG MT12", INVERS + BOLD)
+    lcd.drawText(80, 2, "by RCSIM", INVERS + SMLSIZE)
+
+    lcd.drawText(6, 16, "RETRO ARCADE PONG", SMLSIZE + BOLD)
+    lcd.drawText(6, 26, "- Kierownica/Rolka: Ruch paletki", SMLSIZE)
+    lcd.drawText(6, 35, "- Spust gazu: Smash! (podkrecenie)", SMLSIZE)
+    lcd.drawText(6, 44, "- Klawisz RTN: Wyjscie", SMLSIZE)
+
+    lcd.drawLine(0, 53, 127, 53, SOLID, 1)
+    lcd.drawText(10, 55, "[Rolka / Gaz / ENT] START", SMLSIZE + BOLD)
+
+    local th = getThrottle()
+    if isEnter(event) or th > 300 then
+      isStarted = true
+      playTone(1800, 100, 0)
+    end
+    return 0
+  end
 
   -- 1. Odczyt kierownicy MT12 do pozycji paletki
   local st = getSteering()

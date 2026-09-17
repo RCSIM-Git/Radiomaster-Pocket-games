@@ -50,7 +50,7 @@ ICONS = ["FEED", "REST", "PLAY", "MEDS", "WASH", "STAT"]
 class PocketPetSimulator:
     def __init__(self, root):
         self.root = root
-        self.root.title("Pocket Pet (FPV Drone Simulator - 128x64 LCD)")
+        self.root.title("Pocket Pet by RCSIM (FPV Drone Simulator - 128x64 LCD)")
         self.root.resizable(False, False)
 
         self.BG_COLOR = "#9EAE82"

@@ -132,7 +132,7 @@ local function run(event)
   -- NAGŁÓWEK (y: 0 .. 9)
   -- ====================================================================
   lcd.drawFilledRectangle(0, 0, 128, 10, 1)
-  lcd.drawText(2, 1, "MT12 LAP TRACKER", INVERS + SMLSIZE)
+  lcd.drawText(2, 1, "LAP TIMER by RCSIM", INVERS + SMLSIZE)
 
   local lapNum = isRunning and (#laps + 1) or 0
   local lapStr = string.format("LAP %02d", lapNum)

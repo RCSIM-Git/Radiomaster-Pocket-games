@@ -659,8 +659,9 @@ end
 
 local function drawTitle()
     lcd.clear()
-    lcd.drawText(16, 10, "POCKETMON", MIDSIZE)
-    lcd.drawText(24, 26, "DRONE EDITION", SMLSIZE)
+    lcd.drawText(16, 8, "POCKETMON", MIDSIZE)
+    lcd.drawText(14, 24, "DRONE EDITION", SMLSIZE)
+    lcd.drawText(82, 24, "by RCSIM", SMLSIZE)
     
     local bobY = 38 + math.floor(math.sin(getTime() / 15) * 2)
     drawSprite8x8(60, bobY, BIND_SPRITE)

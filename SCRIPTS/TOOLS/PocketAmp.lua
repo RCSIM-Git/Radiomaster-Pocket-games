@@ -35,7 +35,7 @@ local spectrumPeaks = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 local lastAnimTick = 0
 
 -- Marquee state
-local marqueeText = "POCKETAMP - RETRO AUDIO PLAYER FOR EDGETX"
+local marqueeText = "POCKETAMP - RETRO AUDIO PLAYER by RCSIM"
 local marqueeOffset = 0
 local lastMarqueeTick = 0
 
@@ -351,7 +351,7 @@ local function drawPlayer()
 
     -- 1. TITLE BAR (y: 0..7)
     lcd.drawFilledRectangle(0, 0, 128, 8)
-    lcd.drawText(2, 1, "~ POCKETAMP 2.0", INVERS + SMLSIZE)
+    lcd.drawText(2, 1, "~ POCKETAMP by RCSIM", INVERS + SMLSIZE)
     lcd.drawText(112, 1, "_ X", INVERS + SMLSIZE)
     
     -- 2. MAIN DISPLAY BOX (y: 9..34)

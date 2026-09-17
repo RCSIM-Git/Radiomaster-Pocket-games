@@ -746,8 +746,9 @@ local function run(event)
         -- TITLE SCREEN: Autentyczne logo DOOM
         drawDoomLogo(10, 2)
 
-        lcd.drawText(16, 26, "POCKET EDITION 3D", INVERS + SMLSIZE)
-        lcd.drawText(4, 40, "MOVE: STICKS | FIRE: [SE] / [ENT]", SMLSIZE)
+        lcd.drawText(16, 25, "POCKET EDITION 3D", INVERS + SMLSIZE)
+        lcd.drawText(44, 34, "by RCSIM", SMLSIZE)
+        lcd.drawText(4, 43, "STICKS: MOVE | [SE]/[ENT]: FIRE", SMLSIZE)
 
         local blink = (math.floor(now / 40) % 2 == 0)
         if blink then

@@ -35,8 +35,9 @@ local MODE_STATS = 2
 local MODE_MINIGAME = 3
 local MODE_ANIMATION = 4
 local MODE_CONFIRM_RESET = 5
+local MODE_TITLE = 6
 
-local currentMode = MODE_MAIN
+local currentMode = MODE_TITLE
 local activeAnim = ""
 local animTimer = 0
 local statsIgnoreUntil = 0
@@ -1095,10 +1096,10 @@ end
 --------------------------------------------------------------------------------
 
 local function init()
-    currentMode = MODE_MAIN
+    currentMode = MODE_TITLE
     loadPetState()
     playVolume = getRollerVolume()
-    startupIgnoreUntil = getTime() + 40
+    startupIgnoreUntil = getTime() + 30
     lastTickSec = getTime()
     statsIgnoreUntil = 0
     confirmIgnoreUntil = 0
@@ -1106,7 +1107,6 @@ local function init()
     if pet.stage == STAGE_EGG then
         triggerMessage("Hello! Charge flight case [SE]!", 200)
     else
-        playSfx("happy.wav")
         triggerMessage("Hello! Your drone is ready!", 200)
     end
 end
@@ -1118,6 +1118,33 @@ local function run(event)
     local newVol = getRollerVolume()
     if newVol ~= playVolume then
         playVolume = newVol
+    end
+
+    -- Title Screen Mode
+    if currentMode == MODE_TITLE then
+        lcd.clear()
+        lcd.drawFilledRectangle(0, 0, 128, 11)
+        lcd.drawText(2, 2, "POCKET PET FPV", INVERS + SMLSIZE)
+        lcd.drawText(82, 2, "by RCSIM", INVERS + SMLSIZE)
+
+        local bobY = 30 + math.floor(math.sin(now / 15) * 2)
+        drawTinyWhoop(64, bobY, 0, false)
+
+        lcd.drawText(44, 42, "by RCSIM", SMLSIZE + BOLD)
+
+        local blink = (math.floor(now / 40) % 2 == 0)
+        if blink then
+            lcd.drawText(12, 53, "PRESS [ENT] / [SE] TO START", SMLSIZE)
+        end
+
+        local sePressed = checkSeSwitch()
+        if (isEnter(event) or sePressed) and (now > startupIgnoreUntil) then
+            currentMode = MODE_MAIN
+            playSfx("happy.wav")
+        elseif isExit(event) and (now > startupIgnoreUntil) then
+            return 2
+        end
+        return 0
     end
 
     -- Exit Guard

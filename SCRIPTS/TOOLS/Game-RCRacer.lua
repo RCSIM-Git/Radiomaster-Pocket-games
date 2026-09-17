@@ -99,6 +99,18 @@ local function initGame()
   playTone(1800, 100, 0)
 end
 
+local function init()
+  state = "MENU"
+  score = 0
+  speed = 60
+  distance = 0
+  lives = 3
+  playerX = 64
+  traffic = {}
+  coins = {}
+  nitroTime = 0
+end
+
 local function spawnEntities()
   local now = getTime()
   if now - lastSpawn > 35 then
@@ -152,9 +164,10 @@ local function run(event)
   -- 1. EKRAN MENU
   if state == "MENU" then
     lcd.drawFilledRectangle(0, 0, 128, 11, 1)
-    lcd.drawText(16, 2, "MT12 RC RACER 3D", INVERS + BOLD)
+    lcd.drawText(2, 2, "RC RACER 3D", INVERS + BOLD)
+    lcd.drawText(80, 2, "by RCSIM", INVERS + SMLSIZE)
 
-    lcd.drawText(6, 15, "STEROWANIE APARATURA:", SMLSIZE + BOLD)
+    lcd.drawText(6, 15, "RC RACER by RCSIM", SMLSIZE + BOLD)
     lcd.drawText(6, 24, "- Kierownica: Skret lewo/prawo", SMLSIZE)
     lcd.drawText(6, 33, "- Spust gazu: Pociagnij = Gaz", SMLSIZE)
     lcd.drawText(6, 42, "- Przelacznik SD: Nitro Boost!", SMLSIZE)
@@ -312,4 +325,4 @@ local function run(event)
   return 0
 end
 
-return { run = run, init = initGame }
+return { run = run, init = init }

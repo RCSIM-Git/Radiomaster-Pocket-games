@@ -685,7 +685,7 @@ class PocketmonSimulator:
     def render_title(self):
         self.canvas.create_rectangle(0, 0, WIDTH * SCALE, HEIGHT * SCALE, fill=BG_COLOR, outline="")
         self.canvas.create_text(64 * SCALE, 14 * SCALE, text="POCKETMON", fill=PIXEL_COLOR, font=("Consolas", 16, "bold"))
-        self.canvas.create_text(64 * SCALE, 27 * SCALE, text="DRONE EDITION", fill=PIXEL_COLOR, font=("Consolas", 9, "bold"))
+        self.canvas.create_text(64 * SCALE, 27 * SCALE, text="DRONE EDITION by RCSIM", fill=PIXEL_COLOR, font=("Consolas", 9, "bold"))
         
         bx = 64
         by = 38 + int(math.sin(time.time() * 6) * 2)

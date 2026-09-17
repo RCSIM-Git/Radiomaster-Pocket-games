@@ -16,6 +16,7 @@ local foodX, foodY = 15, 8
 local score = 0
 local hiScore = 0
 local isGameOver = false
+local isStarted = false
 local lastStep = 0
 local prevWheelTurn = 0
 
@@ -93,6 +94,7 @@ local function init()
   dir = 0
   score = 0
   isGameOver = false
+  isStarted = false
   lastStep = getTime()
   prevWheelTurn = 0
   spawnFood()
@@ -102,6 +104,29 @@ local function run(event)
   if isExit(event) then return 2 end
 
   lcd.clear()
+
+  -- Ekran startowy
+  if not isStarted then
+    lcd.drawFilledRectangle(0, 0, 128, 11, 1)
+    lcd.drawText(4, 2, "SNAKE MT12", INVERS + BOLD)
+    lcd.drawText(80, 2, "by RCSIM", INVERS + SMLSIZE)
+
+    lcd.drawText(6, 16, "RETRO CLASSIC SNAKE", SMLSIZE + BOLD)
+    lcd.drawText(6, 26, "- Kierownica/Rolka: Skret lewo/prawo", SMLSIZE)
+    lcd.drawText(6, 35, "- Spust gazu: Turbo Boost!", SMLSIZE)
+    lcd.drawText(6, 44, "- Klawisz RTN: Wyjscie", SMLSIZE)
+
+    lcd.drawLine(0, 53, 127, 53, SOLID, 1)
+    lcd.drawText(10, 55, "[Rolka / Gaz / ENT] START", SMLSIZE + BOLD)
+
+    local th = getThrottle()
+    if isEnter(event) or th > 300 then
+      isStarted = true
+      playTone(1800, 100, 0)
+    end
+    return 0
+  end
+
   local now = getTime()
 
   local th = getThrottle()

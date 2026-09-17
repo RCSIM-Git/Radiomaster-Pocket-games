@@ -573,6 +573,7 @@ local function init()
 
     -- Direct Auto-Play!
     startPlayback()
+    triggerOsd("BAD APPLE by RCSIM", 150)
 end
 
 local function run(event)
