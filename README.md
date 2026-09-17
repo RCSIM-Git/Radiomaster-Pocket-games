@@ -100,6 +100,37 @@ A nostalgic 90s-style desktop audio player recreated for EdgeTX:
 * **Full Playlist Support:** Prev, Play, Pause, Stop, Next, Repeat, Shuffle, and progress seek bar.
 * **Audio Routing:** Listen via the built-in radio speaker or the 3.5mm headphone jack.
 
+### 6. 🚗 CarPet: Virtual RC Garage Edition (`Game-CarPet.lua`)
+An authentic retro virtual RC garage & car pet simulator for your transmitter:
+* **Build & Maintain:** Assemble from bare Tamiya Kit up to Carbon Pro Roller, charge LiPo batteries, wash off track mud, and replace tires.
+* **Iconic Evolutions:** Unlock Team Associated RC10 "Gold Tub", Yokomo YD-2 Drift S15, Traxxas TRX-4 Crawler, Subaru Impreza WRC '99, or Arrma Infraction 8S depending on your driving style.
+* **Dyno Run Mini-Game:** Steer into target RPM zones and hold throttle to score XP.
+* **Dual Control:** Natively supports both MT12 wheel/trigger and Pocket sticks!
+
+### 7. 🏁 RC Racer: Highway Rush (`Game-RCRacer.lua`)
+High-speed retro highway traffic dodger:
+* **Action Packed:** Dodge civilian traffic, collect bonus gold coins, and push your speed up to 220 km/h.
+* **Nitro Boost:** Hit Switch `[SD]` for temporary maximum acceleration!
+* **Controls:** Smooth analog steering with MT12 wheel or Pocket gimbals.
+
+### 8. 🏎️ Tomy Turnin' Turbo Dashboard (`Game-TomyTurbo.lua`)
+Nostalgic recreation of the famous 1980s mechanical tabletop dashboard toy:
+* **Mechanical Road Simulation:** Procedural pseudo-curved highway rendering simulating the rotating mechanical drum.
+* **2-Speed Shifter:** Toggle Switch `[SB]` between LOW (0-60 km/h) and HIGH (up to 160 km/h!).
+* **Fuel & Odometer:** Dodge obstacle vehicles, pick up fuel canisters, and rack up odometer distance before running dry.
+
+### 9. 🕹️ Retro Arcade Classics Suite
+* **`Game-Breakout.lua`**: Classic brick breaker featuring full sound effects (`BREAKOUT/snd`), graphics (`BREAKOUT/gfx`), and dual input support (sticks and wheel).
+* **`Game-Asteroids.lua`**: Space shooter with inertia physics, thrusters, hyperspace, firing, and complete sound effects (`ASTEROIDS/`).
+* **`Game-X-Tris.lua`**: Tetromino falling-block puzzle with rotation, line clearing sound effects, level progression, and stats (`X-TRIS/`).
+* **`Game-Pong-MT12.lua` & `Game-Pong.lua`**: Arcade table tennis with AI opponent and smash mechanics.
+* **`Game-Snake-MT12.lua` & `Game-Snake.lua`**: Retro snake with speed boost.
+* **`Game-Simulator.lua`**: RC aircraft/helicopter precision obstacle flight trainer with record tracking.
+
+### 10. ⏱️ Surface RC Utilities
+* **`CarTuner.lua`**: RC curve, expo, and setup visualizer with profiles for Buggy, Drift, Crawler, and Rally.
+* **`LapTimer.lua`**: High-precision lap timer and personal best (PB) tracker with audio beeps and trigger switches.
+
 ---
 
 ## 🚀 Radio SD Card Installation Guide (Step-by-Step)
@@ -108,28 +139,24 @@ A nostalgic 90s-style desktop audio player recreated for EdgeTX:
 * Any transmitter running **EdgeTX 2.8+** (RadioMaster Pocket, MT12, Boxer, TX12, Zorro, etc.).
 * A MicroSD card formatted as **FAT32**.
 
-### Step 1: Connect your transmitter to PC
-1. Turn on your radio.
-2. Connect it to your PC using a USB-C cable.
-3. On the radio screen, select **`USB Storage (SD)`**.
-4. Your SD card will mount on your PC as a removable drive (e.g., `E:\` or `F:\`).
+### Step 1: Connect your radio to PC
+1. Power ON your radio transmitter.
+2. Connect it to your PC via a USB-C cable.
+3. On the radio LCD prompt, select **`USB Storage (SD)`**.
+4. The SD card will mount on your computer as a removable drive.
 
-### Step 2: Copy Files
-1. Download this repository (click the green **`Code` ➔ `Download ZIP`** button and extract it).
-2. Copy the two main folders:
-   * 📁 **`SCRIPTS`**
-   * 📁 **`SOUNDS`**
-3. Paste them directly into the **root directory of your SD card** (merge with existing folders).
+### Step 2: Copy files
+1. Download this repository (`Code` -> `Download ZIP` and extract).
+2. Copy the folders:
+   - 📁 **`SCRIPTS`**
+   - 📁 **`SOUNDS`**
+3. Paste directly into the **root of your SD card** (merge with existing folders).
 
-> [!TIP]
-> Ensure the Lua scripts are located in `[SD]/SCRIPTS/TOOLS/` and sound files in `[SD]/SOUNDS/`.
-
-### Step 3: Launch on the Radio
-1. Safely eject the USB connection from your PC.
-2. Long-press the **`[SYS]`** button on your radio to enter the system menu.
-3. Use the roller wheel to navigate to the **`TOOLS`** tab.
-4. Scroll through the list and select any app (e.g., **Pocketmon**, **PocketPet**, **Doom**, **PocketAmp**).
-5. Click the roller wheel **`[ENT]`** to launch and play!
+### Step 3: Run on Radio
+1. Safely disconnect USB.
+2. Long-press **`[SYS]`** to enter the System Menu.
+3. Page to the **`TOOLS`** tab.
+4. Scroll and launch any game or tool!
 
 ---
 
@@ -149,13 +176,14 @@ Open the `simulators/` folder and double-click the desired launcher:
 
 ## 🎮 Controls Mapping Guide
 
-| Game Action | RadioMaster Pocket Control | PC Keyboard (Simulator) |
-| :--- | :--- | :--- |
-| **Movement (Up / Down / Left / Right)** | Left or Right Gimbal (Sticks) | Arrow Keys / `W`, `A`, `S`, `D` |
-| **Select / Confirm / Attack / Fire** | Click Roller **`[ENT]`** | **`Enter`** |
-| **Back / Cancel / Start Menu** | Return Button **`[RTN]`** | **`Esc`** / **`Backspace`** |
-| **Quick Action / Paddock Repair** | Momentary Switch **`[SE]`** | **`Spacebar`** |
-| **Mode Toggle / Switch View** | Switch **`[SA]`** / **`[SB]`** | **`Tab`** / **`P`** |
+| Action | RadioMaster Pocket (Sticks) | RadioMaster MT12 (Pistol) | PC Simulator |
+| :--- | :--- | :--- | :--- |
+| **Steering / Movement** | Gimbals (CH1/CH2 or RUD/AIL/ELE/THR) | Steering Wheel (ST) | Arrow Keys / `W`,`A`,`S`,`D` |
+| **Throttle / Accelerate** | Throttle Stick (THR / ELE) | Throttle Trigger (TH Pull) | `W` / `Up` |
+| **Brake / Reverse** | Throttle Stick down | Throttle Trigger (TH Push) | `S` / `Down` |
+| **Select / Confirm / Fire** | Click Roller **`[ENT]`** | Roller **`[ENT]`** / Trigger Pull | **`Enter`** |
+| **Back / Cancel / Exit** | Return Button **`[RTN]`** | Return Button **`[RTN]`** | **`Esc`** / **`Backspace`** |
+| **Quick Action / Nitro / Shifter** | Switch **`[SE]`** / **`[SA]`** | Switch **`[SD]`** / **`[SB]`** | **`Spacebar`** / **`Tab`** |
 
 ---
 
@@ -172,9 +200,26 @@ SD_CARD_ROOT/
 │       ├── Pocketmon.lua
 │       ├── PocketPet.lua
 │       ├── PocketAmp.lua
+│       ├── Game-CarPet.lua
+│       ├── Game-RCRacer.lua
+│       ├── Game-TomyTurbo.lua
+│       ├── Game-Breakout.lua
+│       ├── Game-Asteroids.lua
+│       ├── Game-X-Tris.lua
+│       ├── Game-Pong-MT12.lua
+│       ├── Game-Pong.lua
+│       ├── Game-Snake-MT12.lua
+│       ├── Game-Snake.lua
+│       ├── Game-Simulator.lua
+│       ├── CarTuner.lua
+│       ├── LapTimer.lua
+│       ├── ASTEROIDS/       (gfx, snd)
 │       ├── BADAPPLE/        (badapple.dat, badapple.idx)
+│       ├── BREAKOUT/        (gfx, snd)
+│       ├── CARPET/          (carpet.dat – persistent garage save)
 │       ├── POCKETMON/       (Config & documentation)
-│       └── POCKETPET/       (pet.dat – persistent save)
+│       ├── POCKETPET/       (pet.dat – persistent drone save)
+│       └── X-TRIS/          (gfx, snd)
 └── SOUNDS/
     ├── DOOM/                (Gunshots, monster sounds, item pickups)
     ├── MUSIC/               (Tracks, PocketAmp playlist, badapple.wav)

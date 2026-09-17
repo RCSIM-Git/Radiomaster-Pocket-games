@@ -96,6 +96,37 @@ Kultowy styl klasycznych desktopowych odtwarzaczy muzycznych z lat 90. na Twoim 
 - **Playlista i sterowanie:** Play, Pause, Prev, Next, Repeat, Shuffle, przewijanie paska postępu.
 - **Dźwięk:** Odsłuch przez wbudowany głośniczek lub wyjście słuchawkowe jack 3.5mm w aparaturze!
 
+### 6. 🚗 CarPet: Wirtualny Garaż RC (`Game-CarPet.lua`)
+Autorski retro symulator wirtualnego warsztatu i garażu modeli RC na Twojej aparaturze:
+- **Budowa i obsługa:** Złóż podwozie od gołego kitu Tamiya, ładuj pakiety LiPo, myj auto po szutrze i wymieniaj starte opony.
+- **Kultowe Ewolucje:** Odblokuj legendy modelarstwa: Team Associated RC10 "Gold Tub" Buggy (1984), Yokomo YD-2 Drift S15, Traxxas TRX-4 Crawler, rajdowe Subaru Impreza WRC '99 (McRae 555) lub potwora basherów Arrma Infraction 8S!
+- **Minigra Dyno & Drift:** Utrzymuj obroty w strefie mocy za pomocą gazu i kierownicy, by zdobywać punkty XP.
+- **Podwójne sterowanie:** Natywna obsługa kierownicy/spustu MT12 oraz drążków aparatury Pocket!
+
+### 7. 🏁 RC Racer: Highway Rush (`Game-RCRacer.lua`)
+Dynamiczne retro wyścigi autostradowe:
+- **Szybka akcja:** Omijaj ruch uliczny, zbieraj złote monety i rozpędzaj się do 220 km/h.
+- **Nitro Boost:** Przełącznik `[SD]` aktywuje dopalacz nitro!
+- **Sterowanie:** Płynny skręt kierownicą MT12 lub drążkami aparatury Pocket.
+
+### 8. 🏎️ Tomy Turnin' Turbo Dashboard (`Game-TomyTurbo.lua`)
+Nostalgiczna gra inspirowana kultową zabawką mechaniczną z lat 80. "Tomy Turbo Racing Dashboard":
+- **Symulacja bębna mechanicznego:** Proceduralne rysowanie zakrętów jezdni imitujące ruch mechanicznego walca.
+- **2-biegowa skrzynia biegów:** Przełącznik `[SB]` przełącza między biegiem LOW (0-60 km/h) a HIGH (do 160 km/h!).
+- **Paliwo i licznik:** Omijaj przeszkody, zbieraj kanistry z paliwem i nabijaj kilometry na liczniku.
+
+### 9. 🕹️ Pakiet Gier Retro Arcade
+- **`Game-Breakout.lua`**: Klasyczny arkanoid z pełnymi efektami dźwiękowymi (`BREAKOUT/snd`), grafiką (`BREAKOUT/gfx`) oraz wsparciem dla drążków i kierownicy MT12.
+- **`Game-Asteroids.lua`**: Kosmiczna strzelanka z fizyką bezwładności, dopalaczem, nadprzestrzenią i pełnym audio (`ASTEROIDS/`).
+- **`Game-X-Tris.lua`**: Klasyczny Tetris z obrotem klocków, dźwiękami zbijania linii, poziomami trudności i statystykami (`X-TRIS/`).
+- **`Game-Pong-MT12.lua` & `Game-Pong.lua`**: Klasyczny Pong z przeciwnikiem AI i podkręcaniem piłki (smash).
+- **`Game-Snake-MT12.lua` & `Game-Snake.lua`**: Klasyczny wąż z trybem turbo przyspieszenia.
+- **`Game-Simulator.lua`**: Trener precyzji pilotażu śmigłowcem/samolotem RC z torem przeszkód i pomiarem czasu.
+
+### 10. ⏱️ Narzędzia dla Modeli Kołowych (Surface RC)
+- **`CarTuner.lua`**: Wizualizator krzywych kierownicy, gazu i Expo z gotowymi profilami pod Buggy, Drift, Crawler i Rajdy.
+- **`LapTimer.lua`**: Precyzyjny stoper okrążeń RC z detekcją rekordu życiowego (PB) i sygnalizacją dźwiękową.
+
 ---
 
 ## 🚀 Instrukcja Instalacji na Aparaturze (Krok po kroku)
@@ -117,14 +148,11 @@ Kultowy styl klasycznych desktopowych odtwarzaczy muzycznych z lat 90. na Twoim 
    - 📁 **`SOUNDS`**
 3. Wklej je bezpośrednio do **głównego katalogu karty SD** (nadpisz lub połącz z istniejącymi folderami).
 
-> [!TIP]
-> Upewnij się, że pliki gier trafiły do `[SD]/SCRIPTS/TOOLS/`, a dźwięki do `[SD]/SOUNDS/`.
-
 ### Krok 3: Uruchomienie gry na aparaturze
 1. Bezpiecznie odłącz kabel USB od aparatury.
 2. Przytrzymaj przycisk **`[SYS]`** na aparaturze, aby wejść w menu systemowe.
 3. Za pomocą rolki przejdź na zakładkę **`TOOLS`** (Narzędzia).
-4. Przewiń listę i wybierz dowolną aplikację (np. **Pocketmon**, **PocketPet**, **Doom**, **PocketAmp**).
+4. Przewiń listę i wybierz dowolną aplikację.
 5. Kliknij rolkę **`[ENT]`**, aby uruchomić!
 
 ---
@@ -145,13 +173,14 @@ Wejdź do folderu `simulators/` i uruchom odpowiedni plik dwuklikiem:
 
 ## 🎮 Tabela Sterowania / Controls Guide
 
-| Akcja w grze | Aparatura RadioMaster Pocket | Klawiatura PC (Symulator) |
-| :--- | :--- | :--- |
-| **Poruszanie się (Góra/Dół/Lewo/Prawo)** | Lewy lub prawy Gimbal (drążki) | Strzałki / `W`, `A`, `S`, `D` |
-| **Wybór / Akcja / Atak / Zatwierdź** | Kliknięcie rolki **`[ENT]`** | Klawisz **`Enter`** |
-| **Powrót / Anuluj / Menu Start** | Przycisk powrotu **`[RTN]`** | Klawisz **`Esc`** / **`Backspace`** |
-| **Szybka akcja / Naprawa / Przełącznik** | Przełącznik chwilowy **`[SE]`** | Klawisz **`Spacja`** |
-| **Pauza / Zmiana widoku** | Przełącznik **`[SA]`** lub **`[SB]`** | Klawisz **`Tab`** / **`P`** |
+| Akcja w grze | Aparatura RadioMaster Pocket (Drążki) | RadioMaster MT12 (Pistoletowa) | Klawiatura PC (Symulator) |
+| :--- | :--- | :--- | :--- |
+| **Kierunek / Ruch** | Lewy lub prawy Gimbal (drążki) | Koło kierownicy (ST) | Strzałki / `W`, `A`, `S`, `D` |
+| **Gaz / Przyspieszenie** | Drążek gazu w górę (THR / ELE) | Spust gazu - pociągnięcie (TH) | `W` / `Strzałka w górę` |
+| **Hamulec / Wsteczny** | Drążek gazu w dół | Spust gazu - pchnięcie (TH) | `S` / `Strzałka w dół` |
+| **Wybór / Akcja / Strzał / Opcja** | Kliknięcie rolki **`[ENT]`** | Rolka **`[ENT]`** / Pociągnięcie spustu | Klawisz **`Enter`** |
+| **Powrót / Anuluj / Wyjście** | Przycisk powrotu **`[RTN]`** | Przycisk powrotu **`[RTN]`** | Klawisz **`Esc`** / **`Backspace`** |
+| **Szybka akcja / Nitro / Bieg** | Przełącznik chwilowy **`[SE]`** / **`[SA]`** | Przełącznik **`[SD]`** / **`[SB]`** | Klawisz **`Spacja`** / **`Tab`** |
 
 ---
 
@@ -168,9 +197,26 @@ SD_CARD_ROOT/
 │       ├── Pocketmon.lua
 │       ├── PocketPet.lua
 │       ├── PocketAmp.lua
+│       ├── Game-CarPet.lua
+│       ├── Game-RCRacer.lua
+│       ├── Game-TomyTurbo.lua
+│       ├── Game-Breakout.lua
+│       ├── Game-Asteroids.lua
+│       ├── Game-X-Tris.lua
+│       ├── Game-Pong-MT12.lua
+│       ├── Game-Pong.lua
+│       ├── Game-Snake-MT12.lua
+│       ├── Game-Snake.lua
+│       ├── Game-Simulator.lua
+│       ├── CarTuner.lua
+│       ├── LapTimer.lua
+│       ├── ASTEROIDS/       (gfx, snd)
 │       ├── BADAPPLE/        (badapple.dat, badapple.idx)
+│       ├── BREAKOUT/        (gfx, snd)
+│       ├── CARPET/          (carpet.dat – stan zapisu)
 │       ├── POCKETMON/       (Instrukcje i konfiguracja)
-│       └── POCKETPET/       (pet.dat – stan zapisu)
+│       ├── POCKETPET/       (pet.dat – stan zapisu)
+│       └── X-TRIS/          (gfx, snd)
 └── SOUNDS/
     ├── DOOM/                (Efekty strzałów, wrogów i przedmiotów)
     ├── MUSIC/               (Utwory muzyczne, PocketAmp playlist, badapple.wav)
