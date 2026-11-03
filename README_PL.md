@@ -6,21 +6,21 @@
 [![Display](https://img.shields.io/badge/Display-128x64%20Monochrome%20LCD-brightgreen.svg)]()
 [![Python Simulators](https://img.shields.io/badge/PC%20Simulators-Python%203%20%2F%20Tkinter-green.svg)]()
 
-> 🌐 **Język / Language:** [English (Default)](README.md) | **Polski**
+> 🌐 **Language / Język:** [English](README.md) | **Polski**
 
 Oficjalna kolekcja gier i aplikacji rozrywkowych stworzona specjalnie dla miniaturowej aparatury **RadioMaster Pocket** oraz innych aparatur z monochromatycznym ekranem **128x64** pracujących pod kontrolą systemu **EdgeTX** (np. MT12, Boxer, TX12, Zorro).
 
 ---
 
-## 📑 Spis treści / Table of Contents
+## 📑 Spis treści
 1. [Kompatybilność z Aparaturami](#-kompatybilność-z-innymi-aparaturami-edgetx--opentx)
-2. [Przegląd Gier / Games Showcase](#-przegląd-gier--games-showcase)
+2. [Przegląd Gier i Aplikacji](#-przegląd-gier-i-aplikacji)
 3. [Instrukcja Instalacji na Aparaturze (SD Card)](#-instrukcja-instalacji-na-aparaturze-krok-po-kroku)
 4. [Symulatory PC (Graj na komputerze)](#-symulatory-pc-graj-na-komputerze-bez-radia)
-5. [Tabela Sterowania / Controls](#-tabela-sterowania--controls-guide)
+5. [Tabela Sterowania](#-tabela-sterowania)
 6. [Struktura Katalogów Karty SD](#-struktura-katalogów-karty-sd)
-7. [Narzędzia Deweloperskie](#-narzędzia-deweloperskie--tools)
-8. [Licencja](#-licencja--license)
+7. [Narzędzia Deweloperskie](#-narzędzia-deweloperskie)
+8. [Licencja](#-licencja)
 
 ---
 
@@ -58,7 +58,7 @@ Potwierdzone działanie od razu, bez konieczności jakichkolwiek modyfikacji kod
 
 ---
 
-## 🕹️ Przegląd Gier / Games Showcase
+## 🕹️ Przegląd Gier i Aplikacji
 
 ### 1. 🛸 Pocketmon: Drone Edition (`Pocketmon.lua`)
 Autorskie retro RPG w świecie dronów FPV! 
@@ -168,7 +168,7 @@ Wejdź do folderu `simulators/` i uruchom odpowiedni plik dwuklikiem:
 
 ---
 
-## 🎮 Tabela Sterowania / Controls Guide
+## 🎮 Tabela Sterowania
 
 | Akcja w grze | Aparatura RadioMaster Pocket (Drążki) | RadioMaster MT12 (Pistoletowa) | Klawiatura PC (Symulator) |
 | :--- | :--- | :--- | :--- |
@@ -214,7 +214,7 @@ SD_CARD_ROOT/
 
 ---
 
-## 🛠️ Narzędzia Deweloperskie / Tools
+## 🛠️ Narzędzia Deweloperskie
 
 W folderze `tools/` znajdują się skrypty ułatwiające rozbudowę projektu:
 - **`convert_to_edgetx_wav.bat` / `convert_music.py`**: Automatyczny konwerter dowolnych plików MP3/FLAC na wymagany przez EdgeTX format **WAV 32000Hz, 16-bit PCM, Mono** wraz z dodawaniem do `playlist.txt`.
@@ -224,7 +224,7 @@ W folderze `tools/` znajdują się skrypty ułatwiające rozbudowę projektu:
 
 ---
 
-## 📄 Licencja / License
+## 📄 Licencja
 
 Projekt jest udostępniony na otwartej licencji **MIT License**. Możesz go dowolnie modyfikować, rozwijać i dzielić się nim ze społecznością pilotów RC i entuzjastów EdgeTX!
 

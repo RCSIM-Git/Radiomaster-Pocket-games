@@ -6,7 +6,7 @@
 [![Display](https://img.shields.io/badge/Display-128x64%20Monochrome%20LCD-brightgreen.svg)]()
 [![PC Simulators](https://img.shields.io/badge/PC%20Simulators-Python%203%20%2F%20Tkinter-green.svg)]()
 
-> 🌐 **Language:** **English** | [Polski (Wersja polska)](README_PL.md)
+> 🌐 **Language / Język:** **English** | [Polski](README_PL.md)
 
 The ultimate collection of custom retro games, media players, and entertainment tools engineered specifically for the compact **RadioMaster Pocket** and other **EdgeTX** transmitters featuring a **128x64 monochrome LCD screen** (such as the RadioMaster MT12, Boxer, TX12, and Zorro).
 
